@@ -1,0 +1,3 @@
+[submodule "submodules/cinder_master"]
+	path = submodules/cinder_master
+	url = https://github.com/cinder/Cinder.git

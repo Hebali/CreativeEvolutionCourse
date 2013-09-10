@@ -139,10 +139,9 @@ int main(int argc, const char * argv[])
 	cout << "tStruct.mFloat  = " << tStruct.mFloat << endl;
 	
 	cout << "-----------------------------------------------------------" << endl;
-	cout << "NumericUnionClass:" << endl << endl;
+	cout << "tUnionClass.setFloat( 123.4 );" << endl << endl;
 	
 	NumericUnionClass tUnionClass = NumericUnionClass();
-	
 	tUnionClass.setFloat( 123.4 );
 	
 	if( tUnionClass.isBool() ) {

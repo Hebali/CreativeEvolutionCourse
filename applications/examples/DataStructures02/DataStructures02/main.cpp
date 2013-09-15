@@ -1,3 +1,11 @@
+//////////////////////////////////////////////////
+/*         Evolution as a Creative Tool         */
+/*           Taught by Patrick Hebron           */
+/* Interactive Telecommunications Program (ITP) */
+/*             New York University              */
+/*                  Fall 2013                   */
+//////////////////////////////////////////////////
+
 #include <iostream>
 #include <string>
 

@@ -7,31 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3242BD2817DEA9E7000BCC8F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3242BD2717DEA9E7000BCC8F /* main.cpp */; };
-		3242BD2A17DEA9E7000BCC8F /* DataStructures01.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3242BD2917DEA9E7000BCC8F /* DataStructures01.1 */; };
+		324A653917E64F2000027DD5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 324A653817E64F2000027DD5 /* main.cpp */; };
+		324A653B17E64F2000027DD5 /* Sketch_01_NQueens.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 324A653A17E64F2000027DD5 /* Sketch_01_NQueens.1 */; };
+		324A654317E64F4300027DD5 /* EightQueens.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 324A654117E64F4300027DD5 /* EightQueens.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		3242BD2217DEA9E7000BCC8F /* CopyFiles */ = {
+		324A653317E64F2000027DD5 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
-				3242BD2A17DEA9E7000BCC8F /* DataStructures01.1 in CopyFiles */,
+				324A653B17E64F2000027DD5 /* Sketch_01_NQueens.1 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3242BD2417DEA9E7000BCC8F /* DataStructures01 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DataStructures01; sourceTree = BUILT_PRODUCTS_DIR; };
-		3242BD2717DEA9E7000BCC8F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		3242BD2917DEA9E7000BCC8F /* DataStructures01.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = DataStructures01.1; sourceTree = "<group>"; };
+		324A653517E64F2000027DD5 /* Sketch_01_NQueens */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Sketch_01_NQueens; sourceTree = BUILT_PRODUCTS_DIR; };
+		324A653817E64F2000027DD5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		324A653A17E64F2000027DD5 /* Sketch_01_NQueens.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Sketch_01_NQueens.1; sourceTree = "<group>"; };
+		324A654117E64F4300027DD5 /* EightQueens.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EightQueens.cpp; sourceTree = "<group>"; };
+		324A654217E64F4300027DD5 /* EightQueens.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EightQueens.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3242BD2117DEA9E7000BCC8F /* Frameworks */ = {
+		324A653217E64F2000027DD5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,90 +44,93 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3242BD1B17DEA9E7000BCC8F = {
+		324A652C17E64F2000027DD5 = {
 			isa = PBXGroup;
 			children = (
-				3242BD2617DEA9E7000BCC8F /* DataStructures01 */,
-				3242BD2517DEA9E7000BCC8F /* Products */,
+				324A653717E64F2000027DD5 /* Sketch_01_NQueens */,
+				324A653617E64F2000027DD5 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		3242BD2517DEA9E7000BCC8F /* Products */ = {
+		324A653617E64F2000027DD5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3242BD2417DEA9E7000BCC8F /* DataStructures01 */,
+				324A653517E64F2000027DD5 /* Sketch_01_NQueens */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3242BD2617DEA9E7000BCC8F /* DataStructures01 */ = {
+		324A653717E64F2000027DD5 /* Sketch_01_NQueens */ = {
 			isa = PBXGroup;
 			children = (
-				3242BD2717DEA9E7000BCC8F /* main.cpp */,
-				3242BD2917DEA9E7000BCC8F /* DataStructures01.1 */,
+				324A654217E64F4300027DD5 /* EightQueens.h */,
+				324A654117E64F4300027DD5 /* EightQueens.cpp */,
+				324A653817E64F2000027DD5 /* main.cpp */,
+				324A653A17E64F2000027DD5 /* Sketch_01_NQueens.1 */,
 			);
-			path = DataStructures01;
+			path = Sketch_01_NQueens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3242BD2317DEA9E7000BCC8F /* DataStructures01 */ = {
+		324A653417E64F2000027DD5 /* Sketch_01_NQueens */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3242BD2D17DEA9E7000BCC8F /* Build configuration list for PBXNativeTarget "DataStructures01" */;
+			buildConfigurationList = 324A653E17E64F2000027DD5 /* Build configuration list for PBXNativeTarget "Sketch_01_NQueens" */;
 			buildPhases = (
-				3242BD2017DEA9E7000BCC8F /* Sources */,
-				3242BD2117DEA9E7000BCC8F /* Frameworks */,
-				3242BD2217DEA9E7000BCC8F /* CopyFiles */,
+				324A653117E64F2000027DD5 /* Sources */,
+				324A653217E64F2000027DD5 /* Frameworks */,
+				324A653317E64F2000027DD5 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = DataStructures01;
-			productName = DataStructures01;
-			productReference = 3242BD2417DEA9E7000BCC8F /* DataStructures01 */;
+			name = Sketch_01_NQueens;
+			productName = Sketch_01_NQueens;
+			productReference = 324A653517E64F2000027DD5 /* Sketch_01_NQueens */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		3242BD1C17DEA9E7000BCC8F /* Project object */ = {
+		324A652D17E64F2000027DD5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Patrick J Hebron";
 			};
-			buildConfigurationList = 3242BD1F17DEA9E7000BCC8F /* Build configuration list for PBXProject "DataStructures01" */;
+			buildConfigurationList = 324A653017E64F2000027DD5 /* Build configuration list for PBXProject "Sketch_01_NQueens" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 3242BD1B17DEA9E7000BCC8F;
-			productRefGroup = 3242BD2517DEA9E7000BCC8F /* Products */;
+			mainGroup = 324A652C17E64F2000027DD5;
+			productRefGroup = 324A653617E64F2000027DD5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3242BD2317DEA9E7000BCC8F /* DataStructures01 */,
+				324A653417E64F2000027DD5 /* Sketch_01_NQueens */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3242BD2017DEA9E7000BCC8F /* Sources */ = {
+		324A653117E64F2000027DD5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3242BD2817DEA9E7000BCC8F /* main.cpp in Sources */,
+				324A654317E64F4300027DD5 /* EightQueens.cpp in Sources */,
+				324A653917E64F2000027DD5 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		3242BD2B17DEA9E7000BCC8F /* Debug */ = {
+		324A653C17E64F2000027DD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -162,7 +168,7 @@
 			};
 			name = Debug;
 		};
-		3242BD2C17DEA9E7000BCC8F /* Release */ = {
+		324A653D17E64F2000027DD5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -194,14 +200,14 @@
 			};
 			name = Release;
 		};
-		3242BD2E17DEA9E7000BCC8F /* Debug */ = {
+		324A653F17E64F2000027DD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		3242BD2F17DEA9E7000BCC8F /* Release */ = {
+		324A654017E64F2000027DD5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -211,24 +217,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3242BD1F17DEA9E7000BCC8F /* Build configuration list for PBXProject "DataStructures01" */ = {
+		324A653017E64F2000027DD5 /* Build configuration list for PBXProject "Sketch_01_NQueens" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3242BD2B17DEA9E7000BCC8F /* Debug */,
-				3242BD2C17DEA9E7000BCC8F /* Release */,
+				324A653C17E64F2000027DD5 /* Debug */,
+				324A653D17E64F2000027DD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3242BD2D17DEA9E7000BCC8F /* Build configuration list for PBXNativeTarget "DataStructures01" */ = {
+		324A653E17E64F2000027DD5 /* Build configuration list for PBXNativeTarget "Sketch_01_NQueens" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3242BD2E17DEA9E7000BCC8F /* Debug */,
-				3242BD2F17DEA9E7000BCC8F /* Release */,
+				324A653F17E64F2000027DD5 /* Debug */,
+				324A654017E64F2000027DD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 3242BD1C17DEA9E7000BCC8F /* Project object */;
+	rootObject = 324A652D17E64F2000027DD5 /* Project object */;
 }

@@ -5,20 +5,20 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>E4B5FB1E-ACEA-465D-A533-3196C993405D</string>
+	<string>62C48660-C874-427A-BEEC-0003B6A315E9</string>
 	<key>IDESourceControlProjectName</key>
-	<string>EightQueens</string>
+	<string>Sketch_01_NQueens</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>C346AC41-BA81-47EC-86EA-2070D5879F23</key>
 		<string>ssh://github.com/Hebali/CreativeEvolutionCourse.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>applications/examples/EightQueens/EightQueens.xcodeproj/project.xcworkspace</string>
+	<string>applications/examples/algorithmic_problem_solving/Sketch_01_NQueens/Sketch_01_NQueens.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>C346AC41-BA81-47EC-86EA-2070D5879F23</key>
-		<string>../../../../..</string>
+		<string>../../../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>ssh://github.com/Hebali/CreativeEvolutionCourse.git</string>

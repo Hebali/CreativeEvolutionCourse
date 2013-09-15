@@ -7,34 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		322F1CA717E5F1D800F705F3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 322F1CA617E5F1D800F705F3 /* main.cpp */; };
-		322F1CA917E5F1D800F705F3 /* EightQueens.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 322F1CA817E5F1D800F705F3 /* EightQueens.1 */; };
-		322F1CB117E604A100F705F3 /* EightQueens.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 322F1CAF17E604A100F705F3 /* EightQueens.cpp */; };
+		324A652417E64EBC00027DD5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 324A652317E64EBC00027DD5 /* main.cpp */; };
+		324A652617E64EBC00027DD5 /* Sketch_02_UnionsStructsClasses.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 324A652517E64EBC00027DD5 /* Sketch_02_UnionsStructsClasses.1 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		322F1CA117E5F1D800F705F3 /* CopyFiles */ = {
+		324A651E17E64EBC00027DD5 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
-				322F1CA917E5F1D800F705F3 /* EightQueens.1 in CopyFiles */,
+				324A652617E64EBC00027DD5 /* Sketch_02_UnionsStructsClasses.1 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		322F1CA317E5F1D800F705F3 /* EightQueens */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EightQueens; sourceTree = BUILT_PRODUCTS_DIR; };
-		322F1CA617E5F1D800F705F3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		322F1CA817E5F1D800F705F3 /* EightQueens.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = EightQueens.1; sourceTree = "<group>"; };
-		322F1CAF17E604A100F705F3 /* EightQueens.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EightQueens.cpp; sourceTree = "<group>"; };
-		322F1CB017E604A100F705F3 /* EightQueens.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EightQueens.h; sourceTree = "<group>"; };
+		324A652017E64EBC00027DD5 /* Sketch_02_UnionsStructsClasses */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Sketch_02_UnionsStructsClasses; sourceTree = BUILT_PRODUCTS_DIR; };
+		324A652317E64EBC00027DD5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		324A652517E64EBC00027DD5 /* Sketch_02_UnionsStructsClasses.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Sketch_02_UnionsStructsClasses.1; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		322F1CA017E5F1D800F705F3 /* Frameworks */ = {
+		324A651D17E64EBC00027DD5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -44,93 +41,90 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		322F1C9A17E5F1D800F705F3 = {
+		324A651717E64EBC00027DD5 = {
 			isa = PBXGroup;
 			children = (
-				322F1CA517E5F1D800F705F3 /* EightQueens */,
-				322F1CA417E5F1D800F705F3 /* Products */,
+				324A652217E64EBC00027DD5 /* Sketch_02_UnionsStructsClasses */,
+				324A652117E64EBC00027DD5 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		322F1CA417E5F1D800F705F3 /* Products */ = {
+		324A652117E64EBC00027DD5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				322F1CA317E5F1D800F705F3 /* EightQueens */,
+				324A652017E64EBC00027DD5 /* Sketch_02_UnionsStructsClasses */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		322F1CA517E5F1D800F705F3 /* EightQueens */ = {
+		324A652217E64EBC00027DD5 /* Sketch_02_UnionsStructsClasses */ = {
 			isa = PBXGroup;
 			children = (
-				322F1CB017E604A100F705F3 /* EightQueens.h */,
-				322F1CAF17E604A100F705F3 /* EightQueens.cpp */,
-				322F1CA617E5F1D800F705F3 /* main.cpp */,
-				322F1CA817E5F1D800F705F3 /* EightQueens.1 */,
+				324A652317E64EBC00027DD5 /* main.cpp */,
+				324A652517E64EBC00027DD5 /* Sketch_02_UnionsStructsClasses.1 */,
 			);
-			path = EightQueens;
+			path = Sketch_02_UnionsStructsClasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		322F1CA217E5F1D800F705F3 /* EightQueens */ = {
+		324A651F17E64EBC00027DD5 /* Sketch_02_UnionsStructsClasses */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 322F1CAC17E5F1D800F705F3 /* Build configuration list for PBXNativeTarget "EightQueens" */;
+			buildConfigurationList = 324A652917E64EBC00027DD5 /* Build configuration list for PBXNativeTarget "Sketch_02_UnionsStructsClasses" */;
 			buildPhases = (
-				322F1C9F17E5F1D800F705F3 /* Sources */,
-				322F1CA017E5F1D800F705F3 /* Frameworks */,
-				322F1CA117E5F1D800F705F3 /* CopyFiles */,
+				324A651C17E64EBC00027DD5 /* Sources */,
+				324A651D17E64EBC00027DD5 /* Frameworks */,
+				324A651E17E64EBC00027DD5 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = EightQueens;
-			productName = EightQueens;
-			productReference = 322F1CA317E5F1D800F705F3 /* EightQueens */;
+			name = Sketch_02_UnionsStructsClasses;
+			productName = Sketch_02_UnionsStructsClasses;
+			productReference = 324A652017E64EBC00027DD5 /* Sketch_02_UnionsStructsClasses */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		322F1C9B17E5F1D800F705F3 /* Project object */ = {
+		324A651817E64EBC00027DD5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Patrick J Hebron";
 			};
-			buildConfigurationList = 322F1C9E17E5F1D800F705F3 /* Build configuration list for PBXProject "EightQueens" */;
+			buildConfigurationList = 324A651B17E64EBC00027DD5 /* Build configuration list for PBXProject "Sketch_02_UnionsStructsClasses" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 322F1C9A17E5F1D800F705F3;
-			productRefGroup = 322F1CA417E5F1D800F705F3 /* Products */;
+			mainGroup = 324A651717E64EBC00027DD5;
+			productRefGroup = 324A652117E64EBC00027DD5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				322F1CA217E5F1D800F705F3 /* EightQueens */,
+				324A651F17E64EBC00027DD5 /* Sketch_02_UnionsStructsClasses */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		322F1C9F17E5F1D800F705F3 /* Sources */ = {
+		324A651C17E64EBC00027DD5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				322F1CB117E604A100F705F3 /* EightQueens.cpp in Sources */,
-				322F1CA717E5F1D800F705F3 /* main.cpp in Sources */,
+				324A652417E64EBC00027DD5 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		322F1CAA17E5F1D800F705F3 /* Debug */ = {
+		324A652717E64EBC00027DD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -168,7 +162,7 @@
 			};
 			name = Debug;
 		};
-		322F1CAB17E5F1D800F705F3 /* Release */ = {
+		324A652817E64EBC00027DD5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -200,14 +194,14 @@
 			};
 			name = Release;
 		};
-		322F1CAD17E5F1D800F705F3 /* Debug */ = {
+		324A652A17E64EBC00027DD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		322F1CAE17E5F1D800F705F3 /* Release */ = {
+		324A652B17E64EBC00027DD5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -217,24 +211,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		322F1C9E17E5F1D800F705F3 /* Build configuration list for PBXProject "EightQueens" */ = {
+		324A651B17E64EBC00027DD5 /* Build configuration list for PBXProject "Sketch_02_UnionsStructsClasses" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				322F1CAA17E5F1D800F705F3 /* Debug */,
-				322F1CAB17E5F1D800F705F3 /* Release */,
+				324A652717E64EBC00027DD5 /* Debug */,
+				324A652817E64EBC00027DD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		322F1CAC17E5F1D800F705F3 /* Build configuration list for PBXNativeTarget "EightQueens" */ = {
+		324A652917E64EBC00027DD5 /* Build configuration list for PBXNativeTarget "Sketch_02_UnionsStructsClasses" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				322F1CAD17E5F1D800F705F3 /* Debug */,
-				322F1CAE17E5F1D800F705F3 /* Release */,
+				324A652A17E64EBC00027DD5 /* Debug */,
+				324A652B17E64EBC00027DD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 322F1C9B17E5F1D800F705F3 /* Project object */;
+	rootObject = 324A651817E64EBC00027DD5 /* Project object */;
 }

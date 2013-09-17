@@ -128,7 +128,7 @@ bool NQueensBoard::recursiveSolve(const int& iCol)
 				mSolutionCount++;
 				// Print board:
 				printBoard();
-				// Add temporary call count to total:
+				// Add temporary call count to total (just for analytics):
 				mTotalCallCount += mTempCallCount;
 				// Reset the temporary call count:
 				mTempCallCount = 0;

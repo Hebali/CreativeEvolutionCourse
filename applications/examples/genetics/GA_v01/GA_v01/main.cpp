@@ -5,22 +5,19 @@
 
 using namespace std;
 
+/** 
+ * @brief A templated n-dimensional array supporting variable dimension lengths
+ */
 template <class DataType>
-class GenomePopulation {
-protected:
-	size_t		mTotalIndexCount;
-	size_t		mDimensionCount;
-	size_t*		mUnitsPerDimension;
-	DataType*	mData;
-	
+class NArray {
 public:
 	
-	GenomePopulation()
+	NArray()
 	: mTotalIndexCount( 0 ), mDimensionCount( 0 ), mUnitsPerDimension( NULL ), mData( NULL )
 	{
 	}
 	
-	GenomePopulation(size_t* iUnitsPerDimension, size_t iDimensionCount)
+	NArray(size_t* iUnitsPerDimension, const size_t& iDimensionCount, const DataType& iDefaultVal = 0)
 	: mTotalIndexCount( 0 ), mDimensionCount( iDimensionCount ), mUnitsPerDimension( NULL ), mData( NULL )
 	{
 		if( mDimensionCount > 0 ) {
@@ -34,10 +31,11 @@ public:
 			}
 			// Initialize data array:
 			mData = new DataType[ mTotalIndexCount ];
+			fill( mData, mData + mTotalIndexCount, iDefaultVal );
 		}
 	}
 	
-	~GenomePopulation()
+	~NArray()
 	{
 		if( mUnitsPerDimension ) {
 			delete [] mUnitsPerDimension;
@@ -109,6 +107,11 @@ public:
 		return tIdx;
 	}
 		
+protected:
+	size_t		mTotalIndexCount;
+	size_t		mDimensionCount;
+	size_t*		mUnitsPerDimension;
+	DataType*	mData;
 };
 
 int main(int argc, const char * argv[])
@@ -117,15 +120,18 @@ int main(int argc, const char * argv[])
 	size_t tFeatureCount     = 10;
 	size_t tDimensionPerFeat = 5;
 	
-	GenomePopulation<double>* tGenome = new GenomePopulation<double>( (size_t[]){ tPopulationSize, tFeatureCount, tDimensionPerFeat }, 3 );
-	
-	size_t tIdxCount = tGenome->getDatumCount();
+	NArray<double>* tGenome = new NArray<double>( (size_t[]){ tPopulationSize, tFeatureCount, tDimensionPerFeat }, 3 );
 	
 	size_t tErrCount = 0;
 	
+	// Test the index / coordinate conversion functions:
+	size_t tIdxCount = tGenome->getDatumCount();
 	for(size_t i = 0; i < tIdxCount; i++) {
+		// Get coordinates for index:
 		vector<size_t> tCoords = tGenome->getCoordinates( i );
+		// Get index for coordinates:
 		size_t tConvert = tGenome->getIndex( &tCoords[0] );
+		// If original index and convert don't match, mark error:
 		if( tConvert != i ) {
 			tErrCount++;
 			cout << "ERROR! " << tConvert << " != " << i << endl;
@@ -134,6 +140,7 @@ int main(int argc, const char * argv[])
 	
 	if( tErrCount == 0 ) {
 		cout << "TEST PASSED. " << tGenome->getDatumCount() << endl;
+		
 		tGenome->getDatumAtIndex( 443 ) = 111222.333444;
 		printf( "%f \n", tGenome->getDatumAtIndex( 443 ) );
 		cout << setprecision( 6 ) << fixed << tGenome->getDatumAtIndex( 443 ) << endl << endl;

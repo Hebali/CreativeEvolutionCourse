@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>845BE0ED-97F0-4C81-B073-40D34325BBE4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>GA_v03</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>4F261C57-03EF-4D62-B6D2-69A020EEDA69</key>
+		<string>https://github.com/Hebali/CreativeEvolutionCourse.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>applications/examples/genetics/GA_v03/GA_v03.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>4F261C57-03EF-4D62-B6D2-69A020EEDA69</key>
+		<string>../../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Hebali/CreativeEvolutionCourse.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>4F261C57-03EF-4D62-B6D2-69A020EEDA69</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4F261C57-03EF-4D62-B6D2-69A020EEDA69</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CreativeEvolutionCourse</string>
+		</dict>
+	</array>
+</dict>
+</plist>

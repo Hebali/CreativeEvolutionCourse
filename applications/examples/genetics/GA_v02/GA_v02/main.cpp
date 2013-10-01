@@ -10,6 +10,8 @@
 
 using namespace std;
 
+// SKETCHING EXAMPLE: Preliminary Architectural Components for a Genetic Algorithm in C++
+
 int main(int argc, const char * argv[])
 {
 	size_t tComponentCount = 3;
@@ -101,10 +103,6 @@ int main(int argc, const char * argv[])
 	cout << endl;
 	
 	cout << "DONE\n";
-	
-	Data<double>::Array c_v2_default_arr;
-	c_v2_default_arr.push_back( 999.1 );
-	c_v2_default_arr.push_back( 999.2 );
 	
     return 0;
 }

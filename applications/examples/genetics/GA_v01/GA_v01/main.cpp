@@ -12,6 +12,8 @@
 
 using namespace std;
 
+// SKETCHING EXAMPLE: Preliminary Architectural Components for a Genetic Algorithm in C++
+
 int main(int argc, const char * argv[])
 {
 	size_t tPopulationSize   = 100;
@@ -39,6 +41,7 @@ int main(int argc, const char * argv[])
 	if( tErrCount == 0 ) {
 		cout << "TEST PASSED. " << tGenome->getDatumCount() << endl;
 		
+		// Data access test:
 		tGenome->getDatumAtIndex( 443 ) = 111222.333444;
 		printf( "%f \n", tGenome->getDatumAtIndex( 443 ) );
 		cout << setprecision( 6 ) << fixed << tGenome->getDatumAtIndex( 443 ) << endl << endl;

@@ -19,7 +19,6 @@ class Data {
 public:
 	typedef std::vector<DataType>	Array;		  //!< A one dimensional array of DataType data
 	typedef std::vector<Array>		Matrix;		  //!< A two dimensional matrix of DataType data
-	typedef std::vector<size_t>		Indices;	  //!< A one dimensional array of unsigned integers
 	
 	class Iterator; // forward declaration
 	

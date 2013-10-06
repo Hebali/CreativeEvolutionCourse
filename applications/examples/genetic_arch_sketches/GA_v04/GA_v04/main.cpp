@@ -16,7 +16,7 @@ using namespace std;
 
 typedef std::function<std::string(const int&,const int&)> TestFunc;
 
-std::string myTestFunc(const int& iA, const int& iB)
+std::string myTestFunc(Thing* iA, const int& iB)
 {
 	stringstream ss;
 	ss << "( " << iA << ", " << iB << " )";
@@ -51,7 +51,8 @@ public:
 	void runFunction()
 	{
 		if( mFunc ) {
-			cout << "Function output: " << mFunc( mA, mB ) << endl;
+			string tStr = mFunc( mA, mB );
+			cout << "Function output: " << tStr << endl;
 		}
 		else {
 			cout << "Sorry. Function is not set!" << endl;

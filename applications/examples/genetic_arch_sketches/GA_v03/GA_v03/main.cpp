@@ -20,6 +20,7 @@ public:
 	
 	virtual ~Superclass()
 	{
+		cout << "~Superclass()" << endl;
 	}
 	
 	virtual void getA()
@@ -29,7 +30,7 @@ public:
 	
 	void getB()
 	{
-		cout << "CALLED: Superclass::getA()" << endl;
+		cout << "CALLED: Superclass::getB()" << endl;
 	}
 };
 
@@ -41,6 +42,7 @@ public:
 	
 	~Subclass()
 	{
+		cout << "~Subclass()" << endl;
 	}
 	
 	void getA()

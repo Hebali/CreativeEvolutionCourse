@@ -18,10 +18,15 @@ static float map(const float& value, const float& istart, const float& istop, co
     return ostart + (ostop - ostart) * ((value - istart) / (istop - istart));
 }
 
+typedef std::function<void(char*,const size_t&)>							InitializeFunction;
+typedef std::function<float(const char*,const size_t&)>						FitnessFunction;
+typedef std::function<void(const char*,const char*,char*,const size_t&)>	CrossoverFunction;
+typedef std::function<void(char*, const size_t&,const float&)>				MutationFunction;
+
 static void initializeFunc(char* ioGenes, const size_t& iGeneCount)
 {
 	for(size_t i = 0; i < iGeneCount; i++) {
-		ioGenes[i] = (char)random( 32, 126 );
+		ioGenes[i] = (char)random( 32, 127 );
 	}
 }
 
@@ -46,7 +51,7 @@ static void crossoverFunc(const char* iGenesA, const char* iGenesB, char* oGenes
 static void mutateFunc(char* ioGenes, const size_t& iGeneCount, const float& iMutationRate) {
 	for (int i = 0; i < iGeneCount; i++) {
 		if( ( (float)rand() / (float)RAND_MAX ) < iMutationRate ) {
-			ioGenes[i] = (char) random( 32, 126 );
+			ioGenes[i] = (char) random( 32, 127 );
 		}
 	}
 }
@@ -54,22 +59,22 @@ static void mutateFunc(char* ioGenes, const size_t& iGeneCount, const float& iMu
 
 class Population {
 public:
-	char**	mPopulation;
-	size_t	mPopulationSize;
-	size_t	mGeneCount;
-	size_t	mGenerationIter;
-	float	mMutationRate;
-	bool	mRunning;
+	
+	InitializeFunction	mInitializeFunction;
+	FitnessFunction		mFitnessFunction;
+	CrossoverFunction	mCrossoverFunction;
+	MutationFunction	mMutationFunction;
+	
+	char**				mPopulation;
+	size_t				mPopulationSize;
+	size_t				mGeneCount;
+	size_t				mGenerationIter;
+	float				mMutationRate;
+	bool				mRunning;
 	
 	Population(const size_t& iPopulationSize, const size_t& iGeneCount, const float& iMutationRate) :
 		mPopulationSize( iPopulationSize ), mGeneCount( iGeneCount ), mMutationRate( iMutationRate ), mGenerationIter( 0 ), mRunning( true ), mPopulation( NULL )
 	{
-		// Initialize population:
-		mPopulation = new char*[ mPopulationSize ];
-		for(int i = 0; i < mPopulationSize; i++) {
-			mPopulation[ i ] = new char[ mGeneCount ];
-			initializeFunc( mPopulation[ i ], mGeneCount );
-		}
 	}
 	
 	~Population()
@@ -84,65 +89,100 @@ public:
 		}
 	}
 	
+	void setInitializeFunction(InitializeFunction iFunc)
+	{
+		mInitializeFunction = iFunc;
+	}
+	
+	void setFitnessFunction(FitnessFunction iFunc)
+	{
+		mFitnessFunction = iFunc;
+	}
+	
+	void setCrossoverFunction(CrossoverFunction iFunc)
+	{
+		mCrossoverFunction = iFunc;
+	}
+	
+	void setMutationFunction(MutationFunction iFunc)
+	{
+		mMutationFunction = iFunc;
+	}
+	
+	void initialize()
+	{
+		if( mInitializeFunction ) {
+			// Initialize population:
+			mPopulation = new char*[ mPopulationSize ];
+			for(int i = 0; i < mPopulationSize; i++) {
+				mPopulation[ i ] = new char[ mGeneCount ];
+				mInitializeFunction( mPopulation[ i ], mGeneCount );
+			}
+		}
+	}
+	
 	void runGeneration()
 	{
-		// Prepare scoring variables:
-		float  tScores[ mPopulationSize ];
-		size_t tBestIdx    = 0;
-		float  tBestScore  = -1e12;
-		float  tWorstScore = 1e12;
-		// Perform scoring:
-		for(size_t i = 0; i < mPopulationSize; i++) {
-			tScores[ i ] = fitnessFunc( mPopulation[ i ], mGeneCount );
-			if( tScores[ i ] > tBestScore ) {
-				tBestScore = tScores[ i ];
-				tBestIdx   = i;
-			}
-			if( tScores[ i ] < tWorstScore ) {
-				tWorstScore = tScores[ i ];
-			}
-		}
-		// Print the best individual:
-		cout << "BEST: ";
-		for(size_t i = 0; i < mGeneCount; i++) {
-			cout << mPopulation[ tBestIdx ][ i ];
-		}
-		cout << endl;
-		// Check whether a perfect score has been achieved:
-		if( tBestScore == 1.0 ) {
-			mRunning = false;
-		}
-		else {
-			vector<char*> tPool;
-			// Based on fitness, each member will get added to the mating pool a certain number of times
-			// a higher fitness = more entries to mating pool = more likely to be picked as a parent
-			// a lower fitness = fewer entries to mating pool = less likely to be picked as a parent
-			for(int i = 0; i < mPopulationSize; i++) {
-				float tScoreAdjusted = map( tScores[i], tWorstScore, tBestScore, 0.0, 1.0 );
-				int n = int( tScoreAdjusted * 100 );  // Arbitrary multiplier, we can also use monte carlo method
-				for(int j = 0; j < n; j++) {              // and pick two random numbers
-					tPool.push_back( mPopulation[ i ] );
+		if( mFitnessFunction ) {
+			// Prepare scoring variables:
+			float  tScores[ mPopulationSize ];
+			size_t tBestIdx    = 0;
+			float  tBestScore  = -1e12;
+			float  tWorstScore = 1e12;
+			// Perform scoring:
+			for(size_t i = 0; i < mPopulationSize; i++) {
+				tScores[ i ] = mFitnessFunction( mPopulation[ i ], mGeneCount );
+				if( tScores[ i ] > tBestScore ) {
+					tBestScore = tScores[ i ];
+					tBestIdx   = i;
+				}
+				if( tScores[ i ] < tWorstScore ) {
+					tWorstScore = tScores[ i ];
 				}
 			}
-			int tPoolSize = (int)tPool.size();
-			// Initialize new population:
-			char** tPopulation = new char*[ mPopulationSize ];
-			// Create a new population:
-			for(int i = 0; i < mPopulationSize; i++) {
-				tPopulation[ i ] = new char[ mGeneCount ];
-				crossoverFunc( tPool.at( random( 0, tPoolSize ) ), tPool.at( random( 0, tPoolSize ) ), tPopulation[ i ], mGeneCount );
-				mutateFunc( tPopulation[ i ], mGeneCount, mMutationRate );
+			// Print the best individual:
+			cout << "BEST: ";
+			for(size_t i = 0; i < mGeneCount; i++) {
+				cout << mPopulation[ tBestIdx ][ i ];
 			}
-			// Delete previous population:
-			for(int i = 0; i < mPopulationSize; i++) {
-				delete [] mPopulation[ i ];
+			cout << endl;
+			// Check whether a perfect score has been achieved:
+			if( tBestScore == 1.0 ) {
+				mRunning = false;
 			}
-			delete [] mPopulation;
-			mPopulation = NULL;
-			// Set new population:
-			mPopulation = tPopulation;
-			// Advance generation iter:
-			mGenerationIter++;
+			// Handle mating:
+			else if( mCrossoverFunction && mMutationFunction ) {
+				vector<char*> tPool;
+				// Based on fitness, each member will get added to the mating pool a certain number of times
+				// a higher fitness = more entries to mating pool = more likely to be picked as a parent
+				// a lower fitness = fewer entries to mating pool = less likely to be picked as a parent
+				for(int i = 0; i < mPopulationSize; i++) {
+					float tScoreAdjusted = map( tScores[i], tWorstScore, tBestScore, 0.0, 1.0 );
+					int n = int( tScoreAdjusted * 100 );  // Arbitrary multiplier, we can also use monte carlo method
+					for(int j = 0; j < n; j++) {              // and pick two random numbers
+						tPool.push_back( mPopulation[ i ] );
+					}
+				}
+				int tPoolSize = (int)tPool.size();
+				// Initialize new population:
+				char** tPopulation = new char*[ mPopulationSize ];
+				// Create a new population:
+				for(int i = 0; i < mPopulationSize; i++) {
+					tPopulation[ i ] = new char[ mGeneCount ];
+					mCrossoverFunction( tPool.at( random( 0, tPoolSize ) ), tPool.at( random( 0, tPoolSize ) ), tPopulation[ i ], mGeneCount );
+					mMutationFunction( tPopulation[ i ], mGeneCount, mMutationRate );
+				}
+				// Delete previous population:
+				for(int i = 0; i < mPopulationSize; i++) {
+					delete [] mPopulation[ i ];
+				}
+				delete [] mPopulation;
+				mPopulation = NULL;
+				// Set new population:
+				mPopulation = tPopulation;
+				// Advance generation iter:
+				mGenerationIter++;
+			}
 		}
 	}
 
@@ -163,6 +203,11 @@ int main(int argc, const char * argv[])
 	srand( (unsigned int)time( NULL ) );
 
 	Population* mPopulation = new Population( 1000, kTargetString.size(), 0.01 );
+	mPopulation->setInitializeFunction( initializeFunc );
+	mPopulation->setFitnessFunction( fitnessFunc );
+	mPopulation->setCrossoverFunction( crossoverFunc );
+	mPopulation->setMutationFunction( mutateFunc );
+	mPopulation->initialize();
 	
 	while( mPopulation->isRunning() ) {
 		mPopulation->runGeneration();

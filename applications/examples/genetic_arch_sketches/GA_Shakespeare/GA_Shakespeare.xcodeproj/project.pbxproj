@@ -28,6 +28,7 @@
 		328CBCC51801C53C006FB904 /* GA_Shakespeare */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GA_Shakespeare; sourceTree = BUILT_PRODUCTS_DIR; };
 		328CBCC81801C53C006FB904 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		328CBCCA1801C53C006FB904 /* GA_Shakespeare.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = GA_Shakespeare.1; sourceTree = "<group>"; };
+		32CC4D1318020485008CE8FB /* Population.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Population.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +61,7 @@
 		328CBCC71801C53C006FB904 /* GA_Shakespeare */ = {
 			isa = PBXGroup;
 			children = (
+				32CC4D1318020485008CE8FB /* Population.h */,
 				328CBCC81801C53C006FB904 /* main.cpp */,
 				328CBCCA1801C53C006FB904 /* GA_Shakespeare.1 */,
 			);
@@ -225,6 +227,7 @@
 				328CBCD01801C53C006FB904 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

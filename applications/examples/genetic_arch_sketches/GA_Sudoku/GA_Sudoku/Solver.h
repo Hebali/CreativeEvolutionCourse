@@ -12,7 +12,7 @@
 
 // PARAMETERS:
 
-static const std::string	kAuthorTeam		= "YOUR TEAM NAME GOES HERE";
+static const std::string	kAuthorTeam		= "YOUR_TEAM_NAME_GOES_HERE";
 static const float			kMutationRate	= 0.01f;
 
 // SUDOKU SOLVER FUNCTIONS:

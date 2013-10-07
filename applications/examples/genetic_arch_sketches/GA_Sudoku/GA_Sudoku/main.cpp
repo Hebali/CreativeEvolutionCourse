@@ -17,7 +17,8 @@ using namespace std;
 
 int main(int argc, const char * argv[])
 {
-	// Seed random
+	cout << "STARTING TEAM: \'" << kAuthorTeam << "\'" << endl;
+	// Seed random:
 	srand( (unsigned int)time( NULL ) );
 	// Prepare analytics:
 	size_t tAvgDuration = 0;
@@ -46,11 +47,13 @@ int main(int argc, const char * argv[])
 		// Update analytics:
 		tAvgDuration += ( tTimeStop - tTimeStart );
 		tAvgGenCount += mPopulation->getGenerationNumber();
+		// Print win state:
+		mPopulation->printWinState();
 		// Delete population:
 		delete mPopulation;
 	}
 	// Print score:
-	cout << "TEAM SCORE: " << kAuthorTeam << endl;
+	cout << "TEAM SCORE: \'" << kAuthorTeam << "\'" << endl;
 	cout << "\tAverage Duration: " << ( (float)tAvgDuration / (float)kTestRunCount ) << " milliseconds" << endl;
 	cout << "\tAverage Generation Count: " << ( (float)tAvgGenCount / (float)kTestRunCount ) << endl;
 	// Return:

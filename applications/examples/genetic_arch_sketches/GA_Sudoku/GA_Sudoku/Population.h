@@ -49,6 +49,8 @@ protected:
 	float					mMutationRate;
 	bool					mRunning;
 	
+	DataType*				mWinState;
+	
 public:
 
 	Population(const size_t& iPopulationSize, const size_t& iGeneCount, const float& iMutationRate) :
@@ -58,6 +60,7 @@ public:
 		mGenerationIter( 0 ),
 		mRunning( true ),
 		mPopulation( NULL ),
+		mWinState( NULL ),
 		mInitializeFunction( NULL ),
 		mFitnessFunction( NULL ),
 		mCompletionTestFunction( NULL ),
@@ -76,6 +79,11 @@ public:
 			}
 			delete [] mPopulation;
 			mPopulation = NULL;
+		}
+		// Delete win state:
+		if( mWinState ) {
+			delete [] mWinState;
+			mWinState = NULL;
 		}
 	}
 	
@@ -140,12 +148,12 @@ public:
 					tWorstScore = tScores[ i ];
 				}
 			}
-			// Print the best individual:
-			if( mPrintFunction ) {
-				mPrintFunction( mPopulation[ tBestIdx ], mGeneCount );
-			}
 			// Check whether best individual is complete:
 			if( mCompletionTestFunction( mPopulation[ tBestIdx ], mGeneCount ) ) {
+				// Copy win state:
+				mWinState = new DataType[ mGeneCount ];
+				std::copy( mPopulation[ tBestIdx ], mPopulation[ tBestIdx ] + mGeneCount, mWinState );
+				// Set stop flag:
 				mRunning = false;
 			}
 			// Handle mating:
@@ -184,6 +192,17 @@ public:
 				// Advance generation iter:
 				mGenerationIter++;
 			}
+		}
+	}
+	
+	void printWinState()
+	{
+		if( mPrintFunction && mWinState ) {
+			printf( "WIN STATE:\n" );
+			mPrintFunction( mWinState, mGeneCount );
+		}
+		else {
+			printf( "ERROR: Cannot print valid win state!\n" );
 		}
 	}
 	

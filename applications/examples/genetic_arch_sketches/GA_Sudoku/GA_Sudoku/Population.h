@@ -14,15 +14,13 @@
 #include <vector>
 #include <cmath>
 
-template <class T>
-inline T random(const T& iMin, const T& iMax) {
-	return ( iMin + rand() % (iMax - iMin) );
-}
-
-template <class T>
-inline T map(const T& iValue, const T& iInStart, const T& iInStop, const T& iOutStart, const T& iOutStop)
+inline float map(const float& iValue, const float& iInStart, const float& iInStop, const float& iOutStart, const float& iOutStop)
 {
     return iOutStart + ( iOutStop - iOutStart ) * ( ( iValue - iInStart ) / ( iInStop - iInStart ) );
+}
+
+inline int randomInt(const int& iMin, const int& iMax) {
+	return ( iMin + rand() % (iMax - iMin) );
 }
 
 template <class DataType>
@@ -165,7 +163,7 @@ public:
 				// Create a new population:
 				for(int i = 0; i < mPopulationSize; i++) {
 					tPopulation[ i ] = new DataType[ mGeneCount ];
-					mCrossoverFunction( tPool.at( random( 0, tPoolSize ) ), tPool.at( random( 0, tPoolSize ) ), tPopulation[ i ], mGeneCount );
+					mCrossoverFunction( tPool.at( randomInt( 0, tPoolSize ) ), tPool.at( randomInt( 0, tPoolSize ) ), tPopulation[ i ], mGeneCount );
 					mMutationFunction( tPopulation[ i ], mGeneCount, mMutationRate );
 				}
 				// Delete previous population:

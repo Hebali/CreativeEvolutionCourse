@@ -18,7 +18,7 @@ static const int kBoardTotalTiles = kBoardAxisLen * kBoardAxisLen;
 static void randomBoard(int* ioBoard, const size_t& iTileCount)
 {
 	for(int i = 0; i < iTileCount; i++) {
-		ioBoard[i] = random( 1, 10 );
+		ioBoard[i] = randomInt( 1, 10 );
 	}
 }
 
@@ -30,7 +30,7 @@ static float fitnessFunc(const int* iBoard, const size_t& iTileCount)
 
 static void crossoverFunc(const int* iBoardA, const int* iBoardB, int* oBoard, const size_t& iTileCount)
 {
-	int tMid = random( 0, (int)iTileCount );
+	int tMid = randomInt( 0, (int)iTileCount );
 	for(size_t i = 0; i < iTileCount; i++) {
 		if(i < tMid) { oBoard[i] = iBoardA[i]; }
 		else         { oBoard[i] = iBoardB[i]; }
@@ -41,7 +41,7 @@ static void mutateFunc(int* ioBoard, const size_t& iTileCount, const float& iMut
 {
 	for (int i = 0; i < iTileCount; i++) {
 		if( ( (float)rand() / (float)RAND_MAX ) < iMutationRate ) {
-			ioBoard[i] = random( 1, 10 );
+			ioBoard[i] = randomInt( 1, 10 );
 		}
 	}
 }

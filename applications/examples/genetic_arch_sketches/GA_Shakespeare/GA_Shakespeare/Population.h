@@ -14,15 +14,13 @@
 #include <vector>
 #include <cmath>
 
-template <class T>
-inline T random(const T& iMin, const T& iMax) {
-	return ( iMin + rand() % (iMax - iMin) );
-}
-
-template <class T>
-inline T map(const T& iValue, const T& iInStart, const T& iInStop, const T& iOutStart, const T& iOutStop)
+inline float map(const float& iValue, const float& iInStart, const float& iInStop, const float& iOutStart, const float& iOutStop)
 {
     return iOutStart + ( iOutStop - iOutStart ) * ( ( iValue - iInStart ) / ( iInStop - iInStart ) );
+}
+
+inline int randomInt(const int& iMin, const int& iMax) {
+	return ( iMin + rand() % (iMax - iMin) );
 }
 
 template <class DataType>
@@ -144,13 +142,10 @@ public:
 			// Handle mating:
 			else if( mCrossoverFunction && mMutationFunction ) {
 				std::vector<DataType*> tPool;
-				// Based on fitness, each member will get added to the mating pool a certain number of times
-				// a higher fitness = more entries to mating pool = more likely to be picked as a parent
-				// a lower fitness = fewer entries to mating pool = less likely to be picked as a parent
+				// Add individuals to pool:
 				for(int i = 0; i < mPopulationSize; i++) {
-					float tScoreAdjusted = map( tScores[i], tWorstScore, tBestScore, 0.0f, 1.0f );
-					int n = int( tScoreAdjusted * 100 );  // Arbitrary multiplier, we can also use monte carlo method
-					for(int j = 0; j < n; j++) {              // and pick two random numbers
+					int n = map( tScores[i], tWorstScore, tBestScore, 1.0f, 100.0f );
+					for(int j = 0; j < n; j++) {
 						tPool.push_back( mPopulation[ i ] );
 					}
 				}
@@ -166,7 +161,7 @@ public:
 				// Create a new population:
 				for(int i = 0; i < mPopulationSize; i++) {
 					tPopulation[ i ] = new DataType[ mGeneCount ];
-					mCrossoverFunction( tPool.at( random( 0, tPoolSize ) ), tPool.at( random( 0, tPoolSize ) ), tPopulation[ i ], mGeneCount );
+					mCrossoverFunction( tPool.at( randomInt( 0, tPoolSize ) ), tPool.at( randomInt( 0, tPoolSize ) ), tPopulation[ i ], mGeneCount );
 					mMutationFunction( tPopulation[ i ], mGeneCount, mMutationRate );
 				}
 				// Delete previous population:

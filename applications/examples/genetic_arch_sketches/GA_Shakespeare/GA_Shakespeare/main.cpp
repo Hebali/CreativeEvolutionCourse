@@ -17,7 +17,7 @@ static const string kTargetString = "To be or not to be that is the question..."
 static void initializeFunc(char* ioGenes, const size_t& iGeneCount)
 {
 	for(size_t i = 0; i < iGeneCount; i++) {
-		ioGenes[i] = (char)random( 32, 127 );
+		ioGenes[i] = (char)randomInt( 32, 127 );
 	}
 }
 
@@ -32,7 +32,7 @@ static float fitnessFunc(const char* iGenes, const size_t& iGeneCount) {
 }
 
 static void crossoverFunc(const char* iGenesA, const char* iGenesB, char* oGenes, const size_t& iGeneCount) {
-	int tMid = random( 0, (int)iGeneCount );
+	int tMid = randomInt( 0, (int)iGeneCount );
 	for(size_t i = 0; i < iGeneCount; i++) {
 		if(i < tMid) { oGenes[i] = iGenesA[i]; }
 		else         { oGenes[i] = iGenesB[i]; }
@@ -42,7 +42,7 @@ static void crossoverFunc(const char* iGenesA, const char* iGenesB, char* oGenes
 static void mutateFunc(char* ioGenes, const size_t& iGeneCount, const float& iMutationRate) {
 	for (int i = 0; i < iGeneCount; i++) {
 		if( ( (float)rand() / (float)RAND_MAX ) < iMutationRate ) {
-			ioGenes[i] = (char) random( 32, 127 );
+			ioGenes[i] = (char)randomInt( 32, 127 );
 		}
 	}
 }

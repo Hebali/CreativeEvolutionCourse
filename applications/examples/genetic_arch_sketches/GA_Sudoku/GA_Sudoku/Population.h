@@ -47,19 +47,19 @@ protected:
 	bool				mRunning;
 	
 public:
-	
+
 	Population(const size_t& iPopulationSize, const size_t& iGeneCount, const float& iMutationRate) :
-	mPopulationSize( iPopulationSize ),
-	mGeneCount( iGeneCount ),
-	mMutationRate( iMutationRate ),
-	mGenerationIter( 0 ),
-	mRunning( true ),
-	mPopulation( NULL ),
-	mInitializeFunction( NULL ),
-	mFitnessFunction( NULL ),
-	mCrossoverFunction( NULL ),
-	mMutationFunction( NULL ),
-	mPrintFunction( NULL )
+		mPopulationSize( iPopulationSize ),
+		mGeneCount( iGeneCount ),
+		mMutationRate( iMutationRate ),
+		mGenerationIter( 0 ),
+		mRunning( true ),
+		mPopulation( NULL ),
+		mInitializeFunction( NULL ),
+		mFitnessFunction( NULL ),
+		mCrossoverFunction( NULL ),
+		mMutationFunction( NULL ),
+		mPrintFunction( NULL )
 	{
 	}
 	
@@ -142,12 +142,10 @@ public:
 			// Handle mating:
 			if( mCrossoverFunction && mMutationFunction ) {
 				std::vector<DataType*> tPool;
-				// Based on fitness, each member will get added to the mating pool a certain number of times
-				// a higher fitness = more entries to mating pool = more likely to be picked as a parent
-				// a lower fitness = fewer entries to mating pool = less likely to be picked as a parent
+				// Add individuals to pool:
 				for(int i = 0; i < mPopulationSize; i++) {
-					int n = map( tScores[i], tWorstScore, tBestScore, 0.0f, 1.0f ) * 100;  // Arbitrary multiplier, we can also use monte carlo method
-					for(int j = 0; j < n; j++) {              // and pick two random numbers
+					int tN = map( tScores[i], tWorstScore, tBestScore, 1.0f, 100.0f );
+					for(int j = 0; j < tN; j++) {
 						tPool.push_back( mPopulation[ i ] );
 					}
 				}

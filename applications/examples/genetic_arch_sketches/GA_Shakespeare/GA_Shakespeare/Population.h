@@ -120,9 +120,11 @@ public:
 			size_t tBestIdx    = 0;
 			float  tBestScore  = -1e12;
 			float  tWorstScore = 1e12;
+			float  tAvgScore   = 0.0;
 			// Perform scoring:
 			for(size_t i = 0; i < mPopulationSize; i++) {
 				tScores[ i ] = mFitnessFunction( mPopulation[ i ], mGeneCount );
+				tAvgScore += tScores[ i ];
 				if( tScores[ i ] > tBestScore ) {
 					tBestScore = tScores[ i ];
 					tBestIdx   = i;
@@ -131,6 +133,8 @@ public:
 					tWorstScore = tScores[ i ];
 				}
 			}
+			tAvgScore /= mPopulationSize;
+			printf( "AVG SCORE: %f\n", tAvgScore );
 			// Print the best individual:
 			if( mPrintFunction ) {
 				mPrintFunction( mPopulation[ tBestIdx ], mGeneCount );
@@ -144,8 +148,8 @@ public:
 				std::vector<DataType*> tPool;
 				// Add individuals to pool:
 				for(int i = 0; i < mPopulationSize; i++) {
-					int n = map( tScores[i], tWorstScore, tBestScore, 1.0f, 100.0f );
-					for(int j = 0; j < n; j++) {
+					int tN = map( tScores[i], tWorstScore, tBestScore, 1.0f, 100.0f );
+					for(int j = 0; j < tN; j++) {
 						tPool.push_back( mPopulation[ i ] );
 					}
 				}

@@ -7,29 +7,39 @@
 //////////////////////////////////////////////////
 
 #include <iostream>
+#include <chrono>
 
 #include "Population.h"
 
 using namespace std;
 
-static const int kBoardAxisLen    = 9;
-static const int kBoardTotalTiles = kBoardAxisLen * kBoardAxisLen;
+static const int	kBoardAxisLen    = 9;
+static const int	kBoardTotalTiles = kBoardAxisLen * kBoardAxisLen;
+
+static const int	kTileValueMin    = 1;
+static const int	kTileValueMax    = 9;
+
+static const int	kPopulationSize  = 1000;
+static const float	kMutationRate    = 0.01f;
 
 static void randomBoard(int* ioBoard, const size_t& iTileCount)
 {
 	for(int i = 0; i < iTileCount; i++) {
-		ioBoard[i] = randomInt( 1, 10 );
+		ioBoard[i] = randomInt( kTileValueMin, kTileValueMax + 1 );
 	}
 }
 
 static float fitnessFunc(const int* iBoard, const size_t& iTileCount)
 {
-	// TODO:
+	// EXERCISE: Please implement a function that evaluates the fitness of a given sudoku board here...
+	
 	return (float)rand() / (float)RAND_MAX;
 }
 
 static void crossoverFunc(const int* iBoardA, const int* iBoardB, int* oBoard, const size_t& iTileCount)
 {
+	// EXERCISE: Please feel free to replace the contents of this function to improve upon your algorithm's performance...
+	
 	int tMid = randomInt( 0, (int)iTileCount );
 	for(size_t i = 0; i < iTileCount; i++) {
 		if(i < tMid) { oBoard[i] = iBoardA[i]; }
@@ -39,9 +49,11 @@ static void crossoverFunc(const int* iBoardA, const int* iBoardB, int* oBoard, c
 
 static void mutateFunc(int* ioBoard, const size_t& iTileCount, const float& iMutationRate)
 {
-	for (int i = 0; i < iTileCount; i++) {
+	// EXERCISE: Please feel free to replace the contents of this function to improve upon your algorithm's performance...
+	
+	for(int i = 0; i < iTileCount; i++) {
 		if( ( (float)rand() / (float)RAND_MAX ) < iMutationRate ) {
-			ioBoard[i] = randomInt( 1, 10 );
+			ioBoard[i] = randomInt( kTileValueMin, kTileValueMax + 1 );
 		}
 	}
 }
@@ -59,11 +71,26 @@ static void printBoard(int* iBoard, const size_t& iTileCount)
 	printf( "\n" );
 }
 
+typedef unsigned long long EpochTime;
+
+/**
+ * @brief Static function returns elapsed nanoseconds since 00:00:00 UTC on 1 January 1970
+ */
+inline EpochTime getEpochNanoseconds()
+{
+	auto tNow = std::chrono::system_clock::now();
+	auto tEla = tNow.time_since_epoch();
+	auto tMil = std::chrono::duration_cast<std::chrono::nanoseconds>( tEla );
+	return tMil.count();
+}
+
 int main(int argc, const char * argv[])
 {
 	srand( (unsigned int)time( NULL ) );
 	
-	Population<int>* mPopulation = new Population<int>( 1000, kBoardTotalTiles, 0.01 );
+	EpochTime tTimeStart = getEpochNanoseconds();
+	
+	Population<int>* mPopulation = new Population<int>( kPopulationSize, kBoardTotalTiles, kMutationRate );
 	
 	mPopulation->setInitializeFunction( randomBoard );
 	mPopulation->setFitnessFunction( fitnessFunc );
@@ -77,7 +104,10 @@ int main(int argc, const char * argv[])
 		mPopulation->runGeneration();
 	}
 	
+	EpochTime tTimeStop = getEpochNanoseconds();
+	
 	cout << "GA took " << mPopulation->getGenerationNumber() << " generations." << endl;
+	cout << "GA took " << ( tTimeStop - tTimeStart ) << " nanoseconds." << endl;
 	
 	delete mPopulation;
 	

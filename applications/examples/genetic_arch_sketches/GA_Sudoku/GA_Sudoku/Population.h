@@ -19,7 +19,8 @@ inline float map(const float& iValue, const float& iInStart, const float& iInSto
     return iOutStart + ( iOutStop - iOutStart ) * ( ( iValue - iInStart ) / ( iInStop - iInStart ) );
 }
 
-inline int randomInt(const int& iMin, const int& iMax) {
+inline int randomInt(const int& iMin, const int& iMax)
+{
 	return ( iMin + rand() % (iMax - iMin) );
 }
 
@@ -28,23 +29,25 @@ class Population {
 public:
 	typedef std::function<void(DataType*, const size_t&)>										InitializeFunction;
 	typedef std::function<float(const DataType*, const size_t&)>								FitnessFunction;
+	typedef std::function<bool(DataType*, const size_t&)>										CompletionTestFunction;
 	typedef std::function<void(const DataType*, const DataType*, DataType*, const size_t&)>		CrossoverFunction;
 	typedef std::function<void(DataType*, const size_t&, const float&)>							MutationFunction;
 	typedef std::function<void(DataType*, const size_t&)>										PrintFunction;
 	
 protected:
-	InitializeFunction	mInitializeFunction;
-	FitnessFunction		mFitnessFunction;
-	CrossoverFunction	mCrossoverFunction;
-	MutationFunction	mMutationFunction;
-	PrintFunction		mPrintFunction;
+	InitializeFunction		mInitializeFunction;
+	FitnessFunction			mFitnessFunction;
+	CompletionTestFunction	mCompletionTestFunction;
+	CrossoverFunction		mCrossoverFunction;
+	MutationFunction		mMutationFunction;
+	PrintFunction			mPrintFunction;
 	
-	DataType**			mPopulation;
-	size_t				mPopulationSize;
-	size_t				mGeneCount;
-	size_t				mGenerationIter;
-	float				mMutationRate;
-	bool				mRunning;
+	DataType**				mPopulation;
+	size_t					mPopulationSize;
+	size_t					mGeneCount;
+	size_t					mGenerationIter;
+	float					mMutationRate;
+	bool					mRunning;
 	
 public:
 
@@ -57,6 +60,7 @@ public:
 		mPopulation( NULL ),
 		mInitializeFunction( NULL ),
 		mFitnessFunction( NULL ),
+		mCompletionTestFunction( NULL ),
 		mCrossoverFunction( NULL ),
 		mMutationFunction( NULL ),
 		mPrintFunction( NULL )
@@ -83,6 +87,11 @@ public:
 	void setFitnessFunction(FitnessFunction iFunc)
 	{
 		mFitnessFunction = iFunc;
+	}
+	
+	void setCompletionTestFunction(CompletionTestFunction iFunc)
+	{
+		mCompletionTestFunction = iFunc;
 	}
 	
 	void setCrossoverFunction(CrossoverFunction iFunc)
@@ -114,17 +123,15 @@ public:
 	
 	void runGeneration()
 	{
-		if( mFitnessFunction ) {
+		if( mFitnessFunction && mCompletionTestFunction ) {
 			// Prepare scoring variables:
 			float  tScores[ mPopulationSize ];
 			size_t tBestIdx    = 0;
 			float  tBestScore  = -1e12;
 			float  tWorstScore = 1e12;
-			float  tAvgScore   = 0.0;
 			// Perform scoring:
 			for(size_t i = 0; i < mPopulationSize; i++) {
 				tScores[ i ] = mFitnessFunction( mPopulation[ i ], mGeneCount );
-				tAvgScore += tScores[ i ];
 				if( tScores[ i ] > tBestScore ) {
 					tBestScore = tScores[ i ];
 					tBestIdx   = i;
@@ -133,14 +140,16 @@ public:
 					tWorstScore = tScores[ i ];
 				}
 			}
-			tAvgScore /= mPopulationSize;
-			printf( "AVG SCORE: %f\n", tAvgScore );
 			// Print the best individual:
 			if( mPrintFunction ) {
 				mPrintFunction( mPopulation[ tBestIdx ], mGeneCount );
 			}
+			// Check whether best individual is complete:
+			if( mCompletionTestFunction( mPopulation[ tBestIdx ], mGeneCount ) ) {
+				mRunning = false;
+			}
 			// Handle mating:
-			if( mCrossoverFunction && mMutationFunction ) {
+			else if( mCrossoverFunction && mMutationFunction ) {
 				std::vector<DataType*> tPool;
 				// Add individuals to pool:
 				for(int i = 0; i < mPopulationSize; i++) {
@@ -152,7 +161,7 @@ public:
 				// Check pool size:
 				int tPoolSize = (int)tPool.size();
 				if( tPoolSize == 0 ) {
-					printf( "ERROR\n" );
+					printf( "ERROR: Cannot build genetic population from an empty mating pool.\n" );
 					mRunning = false;
 					return;
 				}

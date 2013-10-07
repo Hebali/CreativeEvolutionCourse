@@ -10,19 +10,14 @@
 
 #include "Constants.h"
 
-// PARAMETERS:
+#pragma mark -
+#pragma mark - TEAM_PARAMS
 
 static const std::string	kAuthorTeam		= "YOUR_TEAM_NAME_GOES_HERE";
 static const float			kMutationRate	= 0.01f;
 
-// SUDOKU SOLVER FUNCTIONS:
-
-static bool solutionCheckFunc(const int* iBoard, const size_t& iTileCount)
-{
-	// EXERCISE: Please implement a function that returns a bool reflecting whether the given board is a Sudoku win-state...
-	
-	return false;
-}
+#pragma mark -
+#pragma mark - TEAM_FUNCTIONS
 
 static float fitnessFunc(const int* iBoard, const size_t& iTileCount)
 {
@@ -48,23 +43,23 @@ static void mutateFunc(int* ioBoard, const size_t& iTileCount, const float& iMut
 	
 	for(int i = 0; i < iTileCount; i++) {
 		if( ( (float)rand() / (float)RAND_MAX ) < iMutationRate ) {
-			ioBoard[i] = randomInt( kTileValueMin, kTileValueMax + 1 );
+			ioBoard[i] = randomInt( getTileValueMin(), getTileValueMax() + 1 );
 		}
 	}
 }
 
 static void randomBoard(int* ioBoard, const size_t& iTileCount)
 {
-	// EXERCISE: You probably won't need to edit this function, but feel free to do so if you like...
+	// EXERCISE: The contents of this function can be edited for testing, but will be reverted for league play...
 	
 	for(int i = 0; i < iTileCount; i++) {
-		ioBoard[i] = randomInt( kTileValueMin, kTileValueMax + 1 );
+		ioBoard[i] = randomInt( getTileValueMin(), getTileValueMax() + 1 );
 	}
 }
 
 static void printBoard(int* iBoard, const size_t& iTileCount)
 {
-	// EXERCISE: You probably won't need to edit this function, but feel free to do so if you like...
+	// EXERCISE: The contents of this function can be edited for testing, but will be reverted for league play...
 	
 	int tAxisLen = sqrt( iTileCount );
 	printf( "%ix%i BOARD:\n", tAxisLen, tAxisLen );

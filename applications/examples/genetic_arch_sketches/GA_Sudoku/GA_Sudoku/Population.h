@@ -14,6 +14,8 @@
 #include <vector>
 #include <cmath>
 
+#include "Constants.h"
+
 inline float map(const float& iValue, const float& iInStart, const float& iInStop, const float& iOutStart, const float& iOutStop)
 {
     return iOutStart + ( iOutStop - iOutStart ) * ( ( iValue - iInStart ) / ( iInStop - iInStart ) );
@@ -29,7 +31,6 @@ class Population {
 public:
 	typedef std::function<void(DataType*, const size_t&)>										InitializeFunction;
 	typedef std::function<float(const DataType*, const size_t&)>								FitnessFunction;
-	typedef std::function<bool(DataType*, const size_t&)>										CompletionTestFunction;
 	typedef std::function<void(const DataType*, const DataType*, DataType*, const size_t&)>		CrossoverFunction;
 	typedef std::function<void(DataType*, const size_t&, const float&)>							MutationFunction;
 	typedef std::function<void(DataType*, const size_t&)>										PrintFunction;
@@ -37,7 +38,6 @@ public:
 protected:
 	InitializeFunction		mInitializeFunction;
 	FitnessFunction			mFitnessFunction;
-	CompletionTestFunction	mCompletionTestFunction;
 	CrossoverFunction		mCrossoverFunction;
 	MutationFunction		mMutationFunction;
 	PrintFunction			mPrintFunction;
@@ -63,7 +63,6 @@ public:
 		mWinState( NULL ),
 		mInitializeFunction( NULL ),
 		mFitnessFunction( NULL ),
-		mCompletionTestFunction( NULL ),
 		mCrossoverFunction( NULL ),
 		mMutationFunction( NULL ),
 		mPrintFunction( NULL )
@@ -97,11 +96,6 @@ public:
 		mFitnessFunction = iFunc;
 	}
 	
-	void setCompletionTestFunction(CompletionTestFunction iFunc)
-	{
-		mCompletionTestFunction = iFunc;
-	}
-	
 	void setCrossoverFunction(CrossoverFunction iFunc)
 	{
 		mCrossoverFunction = iFunc;
@@ -131,7 +125,7 @@ public:
 	
 	void runGeneration()
 	{
-		if( mFitnessFunction && mCompletionTestFunction ) {
+		if( mFitnessFunction ) {
 			// Prepare scoring variables:
 			float  tScores[ mPopulationSize ];
 			size_t tBestIdx    = 0;
@@ -149,7 +143,7 @@ public:
 				}
 			}
 			// Check whether best individual is complete:
-			if( mCompletionTestFunction( mPopulation[ tBestIdx ], mGeneCount ) ) {
+			if( getBoardWin( mPopulation[ tBestIdx ], mGeneCount ) ) {
 				// Copy win state:
 				mWinState = new DataType[ mGeneCount ];
 				std::copy( mPopulation[ tBestIdx ], mPopulation[ tBestIdx ] + mGeneCount, mWinState );

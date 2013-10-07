@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3229CD7B180379C400212611 /* libSudokuConstants.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3229CD7A180379C400212611 /* libSudokuConstants.a */; };
 		32CC4D0B1801FD64008CE8FB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32CC4D0A1801FD64008CE8FB /* main.cpp */; };
 		32CC4D0D1801FD64008CE8FB /* GA_Sudoku.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 32CC4D0C1801FD64008CE8FB /* GA_Sudoku.1 */; };
 /* End PBXBuildFile section */
@@ -25,12 +26,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3229CD79180379C400212611 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		3229CD7A180379C400212611 /* libSudokuConstants.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSudokuConstants.a; sourceTree = "<group>"; };
 		32CC4D071801FD64008CE8FB /* GA_Sudoku */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GA_Sudoku; sourceTree = BUILT_PRODUCTS_DIR; };
 		32CC4D0A1801FD64008CE8FB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		32CC4D0C1801FD64008CE8FB /* GA_Sudoku.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = GA_Sudoku.1; sourceTree = "<group>"; };
 		32CC4D14180208C9008CE8FB /* Population.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Population.h; sourceTree = "<group>"; };
 		32E6C6CC18032C83000F3DF4 /* Solver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Solver.h; sourceTree = "<group>"; };
-		32E6C6CD18032D13000F3DF4 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,12 +40,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3229CD7B180379C400212611 /* libSudokuConstants.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3229CD78180379C400212611 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				3229CD79180379C400212611 /* Constants.h */,
+				3229CD7A180379C400212611 /* libSudokuConstants.a */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		32CC4CFE1801FD64008CE8FB = {
 			isa = PBXGroup;
 			children = (
@@ -63,9 +75,9 @@
 		32CC4D091801FD64008CE8FB /* GA_Sudoku */ = {
 			isa = PBXGroup;
 			children = (
-				32E6C6CC18032C83000F3DF4 /* Solver.h */,
+				3229CD78180379C400212611 /* Constants */,
 				32CC4D14180208C9008CE8FB /* Population.h */,
-				32E6C6CD18032D13000F3DF4 /* Constants.h */,
+				32E6C6CC18032C83000F3DF4 /* Solver.h */,
 				32CC4D0A1801FD64008CE8FB /* main.cpp */,
 				32CC4D0C1801FD64008CE8FB /* GA_Sudoku.1 */,
 			);
@@ -201,6 +213,11 @@
 		32CC4D111801FD64008CE8FB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/pjh/Desktop/Work/Teaching/CreativeEvolutionCourse/applications/examples/genetic_arch_sketches/GA_Sudoku/GA_Sudoku,
+					/Users/pjh/Desktop/Work/Teaching/CreativeEvolutionCourse/applications/examples/genetic_arch_sketches/GA_Sudoku/GA_Sudoku/Constants,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -208,6 +225,11 @@
 		32CC4D121801FD64008CE8FB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/pjh/Desktop/Work/Teaching/CreativeEvolutionCourse/applications/examples/genetic_arch_sketches/GA_Sudoku/GA_Sudoku,
+					/Users/pjh/Desktop/Work/Teaching/CreativeEvolutionCourse/applications/examples/genetic_arch_sketches/GA_Sudoku/GA_Sudoku/Constants,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

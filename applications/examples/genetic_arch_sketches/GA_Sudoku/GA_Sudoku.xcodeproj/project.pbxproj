@@ -215,8 +215,7 @@
 			buildSettings = {
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/pjh/Desktop/Work/Teaching/CreativeEvolutionCourse/applications/examples/genetic_arch_sketches/GA_Sudoku/GA_Sudoku,
-					/Users/pjh/Desktop/Work/Teaching/CreativeEvolutionCourse/applications/examples/genetic_arch_sketches/GA_Sudoku/GA_Sudoku/Constants,
+					"$(SRCROOT)/GA_Sudoku/Constants",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -227,8 +226,7 @@
 			buildSettings = {
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/pjh/Desktop/Work/Teaching/CreativeEvolutionCourse/applications/examples/genetic_arch_sketches/GA_Sudoku/GA_Sudoku,
-					/Users/pjh/Desktop/Work/Teaching/CreativeEvolutionCourse/applications/examples/genetic_arch_sketches/GA_Sudoku/GA_Sudoku/Constants,
+					"$(SRCROOT)/GA_Sudoku/Constants",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

@@ -13,6 +13,20 @@
 
 #include "Solver.h"
 
+/**
+ * GENETIC SUDOKU SOLVER TOURNAMENT
+ *
+ * Population.h contains a basic, generalized framework for the facilitation of a genetic algorithm.
+ * This file may be edited to improve performance or API accessibility but should not be edited in ways that
+ * might conflict with a fair competition.
+ *
+ * Solver.h currently contains some functions stubs. These will be evoked by an instance of the Population class.
+ * Each team should edit these functions to produce a winning Sudoku solver.
+ *
+ * Constants.h contains a few helper functions that are accessible through libSudokuConstants.a, a static library.
+ * To help ensure a fair competition, the implementation of these methods has been masked by the use of the static library.
+ */
+
 using namespace std;
 
 static int init_test_correct[] = {

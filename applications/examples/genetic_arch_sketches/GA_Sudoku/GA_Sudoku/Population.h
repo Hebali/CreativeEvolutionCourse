@@ -26,6 +26,9 @@ inline int randomInt(const int& iMin, const int& iMax)
 	return ( iMin + rand() % (iMax - iMin) );
 }
 
+/**
+ * @brief A templated GA container and facilitator
+ */
 template <class DataType>
 class Population {
 public:
@@ -53,6 +56,9 @@ protected:
 	
 public:
 
+	/**
+	 * @brief Population constructor
+	 */
 	Population(const size_t& iPopulationSize, const size_t& iGeneCount, const float& iMutationRate) :
 		mPopulationSize( iPopulationSize ),
 		mGeneCount( iGeneCount ),
@@ -69,6 +75,9 @@ public:
 	{
 	}
 	
+	/**
+	 * @brief Destructor
+	 */
 	~Population()
 	{
 		// Delete population:
@@ -86,31 +95,49 @@ public:
 		}
 	}
 	
+	/**
+	 * @brief Binds an external initialization function
+	 */
 	void setInitializeFunction(InitializeFunction iFunc)
 	{
 		mInitializeFunction = iFunc;
 	}
 	
+	/**
+	 * @brief Binds an external fitness function
+	 */
 	void setFitnessFunction(FitnessFunction iFunc)
 	{
 		mFitnessFunction = iFunc;
 	}
 	
+	/**
+	 * @brief Binds an external crossover function
+	 */
 	void setCrossoverFunction(CrossoverFunction iFunc)
 	{
 		mCrossoverFunction = iFunc;
 	}
 	
+	/**
+	 * @brief Binds an external mutation function
+	 */
 	void setMutationFunction(MutationFunction iFunc)
 	{
 		mMutationFunction = iFunc;
 	}
 	
+	/**
+	 * @brief Binds an external printer function
+	 */
 	void setPrintFunction(PrintFunction iFunc)
 	{
 		mPrintFunction = iFunc;
 	}
 	
+	/**
+	 * @brief Initializes the genetic population
+	 */
 	void initialize()
 	{
 		if( mInitializeFunction ) {
@@ -123,6 +150,9 @@ public:
 		}
 	}
 	
+	/**
+	 * @brief Runs a single generation of fitness evaluation and mating
+	 */
 	void runGeneration()
 	{
 		if( mFitnessFunction ) {
@@ -189,6 +219,9 @@ public:
 		}
 	}
 	
+	/**
+	 * @brief Prints the saved win state, if one exists
+	 */
 	void printWinState()
 	{
 		if( mPrintFunction && mWinState ) {
@@ -200,11 +233,17 @@ public:
 		}
 	}
 	
+	/**
+	 * @brief Returns true if the GA has produced a Sudoku win state, otherwise false
+	 */
 	bool isRunning()
 	{
 		return mRunning;
 	}
 	
+	/**
+	 * @brief Returns the current generation number
+	 */
 	const size_t& getGenerationNumber() const
 	{
 		return mGenerationIter;

@@ -10,6 +10,10 @@
 
 #include "Constants.h"
 
+/**
+ * THE CONTENTS OF THIS FILE SHOULD BE EDITED TO PRODUCE A WINNING SUDOKU SOLVER...
+ */
+
 #pragma mark -
 #pragma mark - TEAM_PARAMS
 

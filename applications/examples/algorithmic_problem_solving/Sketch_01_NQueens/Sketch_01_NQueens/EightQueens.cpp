@@ -29,6 +29,11 @@ NQueensBoard::NQueensBoard(int iTilesPerAxis)
 
 NQueensBoard::~NQueensBoard()
 {
+	// Delete each row:
+	for(int i = 0; i < mTilesPerAxis; i++) {
+		delete [] mBoard[ i ];
+	}
+	// Delete board:
 	delete [] mBoard;
 }
 

@@ -69,7 +69,7 @@ static void printBoard(int* iBoard, const size_t& iTileCount)
 	printf( "%ix%i BOARD:\n", tAxisLen, tAxisLen );
 	for(int i = 0; i < tAxisLen; i++) {
 		for(int j = 0; j < tAxisLen; j++) {
-			printf( "%i ", iBoard[ j * tAxisLen + i ] );
+			printf( "%i ", iBoard[ i * tAxisLen + j ] );
 		}
 		printf( "\n" );
 	}

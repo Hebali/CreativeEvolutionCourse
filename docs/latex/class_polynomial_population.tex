@@ -1,0 +1,48 @@
+\hypertarget{class_polynomial_population}{\section{Polynomial\-Population Class Reference}
+\label{class_polynomial_population}\index{Polynomial\-Population@{Polynomial\-Population}}
+}
+
+
+A population container and evolutionary process facilitation class for polynomial data and assertions.  
+
+
+
+
+{\ttfamily \#include $<$Polynomial\-Population.\-h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_polynomial_population_a568edac365b311b32b0cd1615b75a961}{typedef std\-::shared\-\_\-ptr\\*
+$<$ std\-::thread $>$ \hyperlink{class_polynomial_population_a568edac365b311b32b0cd1615b75a961}{Thread\-Ref}}\label{class_polynomial_population_a568edac365b311b32b0cd1615b75a961}
+
+\begin{DoxyCompactList}\small\item\em A shared\-\_\-ptr thread wrapper type. \end{DoxyCompactList}\item 
+\hypertarget{class_polynomial_population_a04e8d961feacdb2b80c3320c65c85d5b}{typedef \\*
+ci\-::\-Concurrent\-Circular\-Buffer\\*
+$<$ Polynomial\-Data\-Ref $>$ \hyperlink{class_polynomial_population_a04e8d961feacdb2b80c3320c65c85d5b}{Buffer}}\label{class_polynomial_population_a04e8d961feacdb2b80c3320c65c85d5b}
+
+\begin{DoxyCompactList}\small\item\em A concurrent buffer type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_polynomial_population_aabdc5815c2f71683f8946503a91845bc}{\hyperlink{class_polynomial_population_aabdc5815c2f71683f8946503a91845bc}{Polynomial\-Population} (const \hyperlink{class_assertion_group}{Assertion\-Group} \&i\-Assertion\-Group, const size\-\_\-t \&i\-Population\-Size, const size\-\_\-t \&i\-Max\-Generation\-Count, const float \&i\-Mutation\-Rate, const float \&i\-Perfect\-Score=1e12)}\label{class_polynomial_population_aabdc5815c2f71683f8946503a91845bc}
+
+\begin{DoxyCompactList}\small\item\em Basic constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_polynomial_population_a02b52e7f55d3c0265baba5c0b8df7c5d}{\hyperlink{class_polynomial_population_a02b52e7f55d3c0265baba5c0b8df7c5d}{$\sim$\-Polynomial\-Population} ()}\label{class_polynomial_population_a02b52e7f55d3c0265baba5c0b8df7c5d}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hypertarget{class_polynomial_population_af42a7bf4c36d5adf25a12acc29a1b7b1}{bool \hyperlink{class_polynomial_population_af42a7bf4c36d5adf25a12acc29a1b7b1}{has\-Update} ()}\label{class_polynomial_population_af42a7bf4c36d5adf25a12acc29a1b7b1}
+
+\begin{DoxyCompactList}\small\item\em Returns true if the internal buffer contains at least one item. \end{DoxyCompactList}\item 
+\hypertarget{class_polynomial_population_a3a5efce92419c5da88f2199abe8c4c16}{Polynomial\-Data\-Ref \hyperlink{class_polynomial_population_a3a5efce92419c5da88f2199abe8c4c16}{get\-Update} ()}\label{class_polynomial_population_a3a5efce92419c5da88f2199abe8c4c16}
+
+\begin{DoxyCompactList}\small\item\em Pops an item from the internal buffer and returns it in a thread-\/safe manner. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A population container and evolutionary process facilitation class for polynomial data and assertions. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/\-Users/pjh/\-Desktop/\-Work/\-Teaching/\-Creative\-Evolution\-Course/core/include/genetic/Polynomial\-Population.\-h\item 
+/\-Users/pjh/\-Desktop/\-Work/\-Teaching/\-Creative\-Evolution\-Course/core/src/genetic/Polynomial\-Population.\-cpp\end{DoxyCompactItemize}

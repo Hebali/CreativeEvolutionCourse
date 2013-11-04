@@ -1,0 +1,99 @@
+\hypertarget{class_assertion}{\section{Assertion Class Reference}
+\label{class_assertion}\index{Assertion@{Assertion}}
+}
+
+
+A compact description of a comparative assertion template.  
+
+
+
+
+{\ttfamily \#include $<$Polynomial\-Assertion.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_assertion_a97bcb911418eb279c6ccc6236208a06a}{\hyperlink{class_assertion_a97bcb911418eb279c6ccc6236208a06a}{Assertion} ()}\label{class_assertion_a97bcb911418eb279c6ccc6236208a06a}
+
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_assertion_a3acb3e23e1c425d1a017edf3186b31fa}{float \hyperlink{class_assertion_a3acb3e23e1c425d1a017edf3186b31fa}{apply\-To} (Polynomial\-Data\-Ref i\-Lhs\-Ref) const }\label{class_assertion_a3acb3e23e1c425d1a017edf3186b31fa}
+
+\begin{DoxyCompactList}\small\item\em Applies the assertion to the given left-\/hand data. \end{DoxyCompactList}\item 
+\hypertarget{class_assertion_a8181e04370c4581826e2d93973373def}{std\-::string \hyperlink{class_assertion_a8181e04370c4581826e2d93973373def}{get\-Assertion\-String} (Polynomial\-Data\-Ref i\-Lhs\-Ref) const }\label{class_assertion_a8181e04370c4581826e2d93973373def}
+
+\begin{DoxyCompactList}\small\item\em Returns a formatted string representing the assertion. \end{DoxyCompactList}\item 
+\hypertarget{class_assertion_a32800847872df8197d7d640584c19592}{void \hyperlink{class_assertion_a32800847872df8197d7d640584c19592}{set\-Data\-Rhs} (Polynomial\-Data\-Ref i\-Data\-Rhs)}\label{class_assertion_a32800847872df8197d7d640584c19592}
+
+\begin{DoxyCompactList}\small\item\em Sets the right-\/hand data reference. \end{DoxyCompactList}\item 
+\hypertarget{class_assertion_a0daf687650609e4629d06418152a1985}{Polynomial\-Data\-Ref \hyperlink{class_assertion_a0daf687650609e4629d06418152a1985}{get\-Data\-Rhs} () const }\label{class_assertion_a0daf687650609e4629d06418152a1985}
+
+\begin{DoxyCompactList}\small\item\em Returns the right-\/hand data reference. \end{DoxyCompactList}\item 
+\hypertarget{class_assertion_ae761bb8fbc7d1eed09b3a7462139bcb2}{void \hyperlink{class_assertion_ae761bb8fbc7d1eed09b3a7462139bcb2}{set\-Parameter\-Range} (const float \&i\-Param\-In, const float \&i\-Param\-Out)}\label{class_assertion_ae761bb8fbc7d1eed09b3a7462139bcb2}
+
+\begin{DoxyCompactList}\small\item\em Sets the assertion's parameter range. \end{DoxyCompactList}\item 
+\hypertarget{class_assertion_a491e7b2bd569988d9e1b3c62ff438a63}{const float \& \hyperlink{class_assertion_a491e7b2bd569988d9e1b3c62ff438a63}{get\-Parameter\-Range\-In} () const }\label{class_assertion_a491e7b2bd569988d9e1b3c62ff438a63}
+
+\begin{DoxyCompactList}\small\item\em Returns the assertion's lower-\/bounds parameter. \end{DoxyCompactList}\item 
+\hypertarget{class_assertion_a3c772dd035cea465322b91c8d4629a38}{const float \& \hyperlink{class_assertion_a3c772dd035cea465322b91c8d4629a38}{get\-Parameter\-Range\-Out} () const }\label{class_assertion_a3c772dd035cea465322b91c8d4629a38}
+
+\begin{DoxyCompactList}\small\item\em Returns the assertion's upper-\/bounds parameter. \end{DoxyCompactList}\item 
+\hypertarget{class_assertion_a2557fb49a553c4d271abe420e5ea14cd}{void \hyperlink{class_assertion_a2557fb49a553c4d271abe420e5ea14cd}{set\-Score\-Weight} (const float \&i\-Weight)}\label{class_assertion_a2557fb49a553c4d271abe420e5ea14cd}
+
+\begin{DoxyCompactList}\small\item\em Sets the score weighting multiplier. \end{DoxyCompactList}\item 
+\hypertarget{class_assertion_ab56b536f685ec371b16dc563283b6bb6}{const float \& \hyperlink{class_assertion_ab56b536f685ec371b16dc563283b6bb6}{get\-Score\-Weight} () const }\label{class_assertion_ab56b536f685ec371b16dc563283b6bb6}
+
+\begin{DoxyCompactList}\small\item\em Returns the score weighting multiplier. \end{DoxyCompactList}\item 
+\hypertarget{class_assertion_ad13971eb3844f686fdd7b48459a0949f}{void \hyperlink{class_assertion_ad13971eb3844f686fdd7b48459a0949f}{set\-Type} (const Assert\-Type \&i\-Type)}\label{class_assertion_ad13971eb3844f686fdd7b48459a0949f}
+
+\begin{DoxyCompactList}\small\item\em Sets the assertion type. \end{DoxyCompactList}\item 
+\hypertarget{class_assertion_a7f1f97192d8b0c323de25c70bec720bd}{const Assert\-Type \& \hyperlink{class_assertion_a7f1f97192d8b0c323de25c70bec720bd}{get\-Type} () const }\label{class_assertion_a7f1f97192d8b0c323de25c70bec720bd}
+
+\begin{DoxyCompactList}\small\item\em Returns the assertion type. \end{DoxyCompactList}\item 
+\hypertarget{class_assertion_a460c09864d8b88fc263cecef3de8b617}{void \hyperlink{class_assertion_a460c09864d8b88fc263cecef3de8b617}{set\-Mode} (const Assert\-Mode \&i\-Mode\-Lhs, const Assert\-Mode \&i\-Mode\-Rhs)}\label{class_assertion_a460c09864d8b88fc263cecef3de8b617}
+
+\begin{DoxyCompactList}\small\item\em Sets the left-\/hand assertion mode. \end{DoxyCompactList}\item 
+\hypertarget{class_assertion_a95d508dcbdea589c8a0241eacf1bf91c}{void \hyperlink{class_assertion_a95d508dcbdea589c8a0241eacf1bf91c}{set\-Mode\-Lhs} (const Assert\-Mode \&i\-Mode\-Lhs)}\label{class_assertion_a95d508dcbdea589c8a0241eacf1bf91c}
+
+\begin{DoxyCompactList}\small\item\em Sets the left-\/hand assertion mode. \end{DoxyCompactList}\item 
+\hypertarget{class_assertion_a01c7441478143582d97797f555cc50fc}{const Assert\-Mode \& \hyperlink{class_assertion_a01c7441478143582d97797f555cc50fc}{get\-Mode\-Lhs} () const }\label{class_assertion_a01c7441478143582d97797f555cc50fc}
+
+\begin{DoxyCompactList}\small\item\em Returns the left-\/hand assertion mode. \end{DoxyCompactList}\item 
+\hypertarget{class_assertion_a59d5b15c6b30a9d1d461a8e81c19daf4}{void \hyperlink{class_assertion_a59d5b15c6b30a9d1d461a8e81c19daf4}{set\-Mode\-Rhs} (const Assert\-Mode \&i\-Mode\-Rhs)}\label{class_assertion_a59d5b15c6b30a9d1d461a8e81c19daf4}
+
+\begin{DoxyCompactList}\small\item\em Sets the right-\/hand assertion mode. \end{DoxyCompactList}\item 
+\hypertarget{class_assertion_aec6c1c7acfdd75cfd1ee0af0484c5f20}{const Assert\-Mode \& \hyperlink{class_assertion_aec6c1c7acfdd75cfd1ee0af0484c5f20}{get\-Mode\-Rhs} () const }\label{class_assertion_aec6c1c7acfdd75cfd1ee0af0484c5f20}
+
+\begin{DoxyCompactList}\small\item\em Returns the right-\/hand assertion mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_assertion_af7bf1163869dbd06a4a813939de4ad10}{float \hyperlink{class_assertion_af7bf1163869dbd06a4a813939de4ad10}{m\-Range\-In}}\label{class_assertion_af7bf1163869dbd06a4a813939de4ad10}
+
+\begin{DoxyCompactList}\small\item\em The beginning of the param range. \end{DoxyCompactList}\item 
+\hypertarget{class_assertion_a715cdcfac591df490a6c48b303bc8f3b}{float \hyperlink{class_assertion_a715cdcfac591df490a6c48b303bc8f3b}{m\-Range\-Out}}\label{class_assertion_a715cdcfac591df490a6c48b303bc8f3b}
+
+\begin{DoxyCompactList}\small\item\em The end of the param range. \end{DoxyCompactList}\item 
+\hypertarget{class_assertion_a3b38db2afb97da13cc6b6e57780d8dc9}{float \hyperlink{class_assertion_a3b38db2afb97da13cc6b6e57780d8dc9}{m\-Score\-Weight}}\label{class_assertion_a3b38db2afb97da13cc6b6e57780d8dc9}
+
+\begin{DoxyCompactList}\small\item\em The score multiplier value. \end{DoxyCompactList}\item 
+\hypertarget{class_assertion_aa188ff1f3f8ab00cc76bc152ac55c2ed}{Assert\-Type \hyperlink{class_assertion_aa188ff1f3f8ab00cc76bc152ac55c2ed}{m\-Type}}\label{class_assertion_aa188ff1f3f8ab00cc76bc152ac55c2ed}
+
+\begin{DoxyCompactList}\small\item\em The assertion type. \end{DoxyCompactList}\item 
+\hypertarget{class_assertion_aaa36f2a3e47ab1fb4b87b11e70b0da2f}{Assert\-Mode \hyperlink{class_assertion_aaa36f2a3e47ab1fb4b87b11e70b0da2f}{m\-Mode\-Lhs}}\label{class_assertion_aaa36f2a3e47ab1fb4b87b11e70b0da2f}
+
+\begin{DoxyCompactList}\small\item\em The left-\/hand assertion mode. \end{DoxyCompactList}\item 
+\hypertarget{class_assertion_aea9edb490f08cfc22de5eaf3aed7992d}{Assert\-Mode \hyperlink{class_assertion_aea9edb490f08cfc22de5eaf3aed7992d}{m\-Mode\-Rhs}}\label{class_assertion_aea9edb490f08cfc22de5eaf3aed7992d}
+
+\begin{DoxyCompactList}\small\item\em The right-\/hand assertion mode. \end{DoxyCompactList}\item 
+\hypertarget{class_assertion_aa09253adce817c0261d3f7917b84466c}{Polynomial\-Data\-Ref \hyperlink{class_assertion_aa09253adce817c0261d3f7917b84466c}{m\-Data\-Rhs}}\label{class_assertion_aa09253adce817c0261d3f7917b84466c}
+
+\begin{DoxyCompactList}\small\item\em A reference to the right-\/hand data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A compact description of a comparative assertion template. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/\-Users/pjh/\-Desktop/\-Work/\-Teaching/\-Creative\-Evolution\-Course/core/include/genetic/Polynomial\-Assertion.\-h\item 
+/\-Users/pjh/\-Desktop/\-Work/\-Teaching/\-Creative\-Evolution\-Course/core/src/genetic/Polynomial\-Assertion.\-cpp\end{DoxyCompactItemize}

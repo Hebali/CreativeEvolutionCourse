@@ -12,15 +12,15 @@
 		00B784B40FF439BC000DE1D7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B00FF439BC000DE1D7 /* AudioToolbox.framework */; };
 		00B784B50FF439BC000DE1D7 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B10FF439BC000DE1D7 /* AudioUnit.framework */; };
 		00B784B60FF439BC000DE1D7 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B20FF439BC000DE1D7 /* CoreAudio.framework */; };
-		32A2D292182820F500D3D31D /* PolynomialAssertion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32A2D288182820F500D3D31D /* PolynomialAssertion.cpp */; };
-		32A2D293182820F500D3D31D /* PolynomialData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32A2D289182820F500D3D31D /* PolynomialData.cpp */; };
-		32A2D294182820F500D3D31D /* PolynomialPopulation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32A2D28A182820F500D3D31D /* PolynomialPopulation.cpp */; };
-		32A2D295182820F500D3D31D /* GuiBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32A2D28C182820F500D3D31D /* GuiBase.cpp */; };
-		32A2D296182820F500D3D31D /* GuiPlot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32A2D28D182820F500D3D31D /* GuiPlot.cpp */; };
-		32A2D297182820F500D3D31D /* GuiPlotData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32A2D28E182820F500D3D31D /* GuiPlotData.cpp */; };
-		32A2D298182820F500D3D31D /* GuiRect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32A2D28F182820F500D3D31D /* GuiRect.cpp */; };
-		32A2D299182820F500D3D31D /* GuiText.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32A2D290182820F500D3D31D /* GuiText.cpp */; };
-		32A2D29A182820F500D3D31D /* GuiTypography.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32A2D291182820F500D3D31D /* GuiTypography.cpp */; };
+		324A5DB6182839080052472E /* PolynomialAssertion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 324A5DAC182839080052472E /* PolynomialAssertion.cpp */; };
+		324A5DB7182839080052472E /* PolynomialData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 324A5DAD182839080052472E /* PolynomialData.cpp */; };
+		324A5DB8182839080052472E /* PolynomialPopulation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 324A5DAE182839080052472E /* PolynomialPopulation.cpp */; };
+		324A5DB9182839080052472E /* GuiBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 324A5DB0182839080052472E /* GuiBase.cpp */; };
+		324A5DBA182839080052472E /* GuiPlot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 324A5DB1182839080052472E /* GuiPlot.cpp */; };
+		324A5DBB182839080052472E /* GuiPlotData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 324A5DB2182839080052472E /* GuiPlotData.cpp */; };
+		324A5DBC182839080052472E /* GuiRect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 324A5DB3182839080052472E /* GuiRect.cpp */; };
+		324A5DBD182839080052472E /* GuiText.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 324A5DB4182839080052472E /* GuiText.cpp */; };
+		324A5DBE182839080052472E /* GuiTypography.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 324A5DB5182839080052472E /* GuiTypography.cpp */; };
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
 		5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B50EAFCA7E003A9687 /* QTKit.framework */; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -38,24 +38,24 @@
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		32A2D27C182820F500D3D31D /* PolynomialAssertion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolynomialAssertion.h; sourceTree = "<group>"; };
-		32A2D27D182820F500D3D31D /* PolynomialData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolynomialData.h; sourceTree = "<group>"; };
-		32A2D27E182820F500D3D31D /* PolynomialPopulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolynomialPopulation.h; sourceTree = "<group>"; };
-		32A2D280182820F500D3D31D /* GuiBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuiBase.h; sourceTree = "<group>"; };
-		32A2D281182820F500D3D31D /* GuiPlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuiPlot.h; sourceTree = "<group>"; };
-		32A2D282182820F500D3D31D /* GuiPlotData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuiPlotData.h; sourceTree = "<group>"; };
-		32A2D283182820F500D3D31D /* GuiRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuiRect.h; sourceTree = "<group>"; };
-		32A2D284182820F500D3D31D /* GuiText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuiText.h; sourceTree = "<group>"; };
-		32A2D285182820F500D3D31D /* GuiTypography.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuiTypography.h; sourceTree = "<group>"; };
-		32A2D288182820F500D3D31D /* PolynomialAssertion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PolynomialAssertion.cpp; sourceTree = "<group>"; };
-		32A2D289182820F500D3D31D /* PolynomialData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PolynomialData.cpp; sourceTree = "<group>"; };
-		32A2D28A182820F500D3D31D /* PolynomialPopulation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PolynomialPopulation.cpp; sourceTree = "<group>"; };
-		32A2D28C182820F500D3D31D /* GuiBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GuiBase.cpp; sourceTree = "<group>"; };
-		32A2D28D182820F500D3D31D /* GuiPlot.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GuiPlot.cpp; sourceTree = "<group>"; };
-		32A2D28E182820F500D3D31D /* GuiPlotData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GuiPlotData.cpp; sourceTree = "<group>"; };
-		32A2D28F182820F500D3D31D /* GuiRect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GuiRect.cpp; sourceTree = "<group>"; };
-		32A2D290182820F500D3D31D /* GuiText.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GuiText.cpp; sourceTree = "<group>"; };
-		32A2D291182820F500D3D31D /* GuiTypography.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GuiTypography.cpp; sourceTree = "<group>"; };
+		324A5DA0182839080052472E /* PolynomialAssertion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolynomialAssertion.h; sourceTree = "<group>"; };
+		324A5DA1182839080052472E /* PolynomialData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolynomialData.h; sourceTree = "<group>"; };
+		324A5DA2182839080052472E /* PolynomialPopulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolynomialPopulation.h; sourceTree = "<group>"; };
+		324A5DA4182839080052472E /* GuiBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuiBase.h; sourceTree = "<group>"; };
+		324A5DA5182839080052472E /* GuiPlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuiPlot.h; sourceTree = "<group>"; };
+		324A5DA6182839080052472E /* GuiPlotData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuiPlotData.h; sourceTree = "<group>"; };
+		324A5DA7182839080052472E /* GuiRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuiRect.h; sourceTree = "<group>"; };
+		324A5DA8182839080052472E /* GuiText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuiText.h; sourceTree = "<group>"; };
+		324A5DA9182839080052472E /* GuiTypography.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuiTypography.h; sourceTree = "<group>"; };
+		324A5DAC182839080052472E /* PolynomialAssertion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PolynomialAssertion.cpp; sourceTree = "<group>"; };
+		324A5DAD182839080052472E /* PolynomialData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PolynomialData.cpp; sourceTree = "<group>"; };
+		324A5DAE182839080052472E /* PolynomialPopulation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PolynomialPopulation.cpp; sourceTree = "<group>"; };
+		324A5DB0182839080052472E /* GuiBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GuiBase.cpp; sourceTree = "<group>"; };
+		324A5DB1182839080052472E /* GuiPlot.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GuiPlot.cpp; sourceTree = "<group>"; };
+		324A5DB2182839080052472E /* GuiPlotData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GuiPlotData.cpp; sourceTree = "<group>"; };
+		324A5DB3182839080052472E /* GuiRect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GuiRect.cpp; sourceTree = "<group>"; };
+		324A5DB4182839080052472E /* GuiText.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GuiText.cpp; sourceTree = "<group>"; };
+		324A5DB5182839080052472E /* GuiTypography.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GuiTypography.cpp; sourceTree = "<group>"; };
 		381AF119EDF348EABAB0D1F9 /* PolynomialEvolutionApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = PolynomialEvolutionApp.cpp; path = ../src/PolynomialEvolutionApp.cpp; sourceTree = "<group>"; };
 		5323E6B10EAFCA74003A9687 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
 		5323E6B50EAFCA7E003A9687 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
@@ -87,8 +87,7 @@
 		01B97315FEAEA392516A2CEA /* Blocks */ = {
 			isa = PBXGroup;
 			children = (
-				32A2D27A182820F500D3D31D /* include */,
-				32A2D286182820F500D3D31D /* src */,
+				324A5D9D182839080052472E /* core */,
 			);
 			name = Blocks;
 			sourceTree = "<group>";
@@ -173,68 +172,76 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		32A2D27A182820F500D3D31D /* include */ = {
+		324A5D9D182839080052472E /* core */ = {
 			isa = PBXGroup;
 			children = (
-				32A2D27B182820F500D3D31D /* genetic */,
-				32A2D27F182820F500D3D31D /* gui */,
+				324A5D9E182839080052472E /* include */,
+				324A5DAA182839080052472E /* src */,
 			);
-			name = include;
-			path = ../../../../include;
+			name = core;
+			path = ../../../../core;
 			sourceTree = "<group>";
 		};
-		32A2D27B182820F500D3D31D /* genetic */ = {
+		324A5D9E182839080052472E /* include */ = {
 			isa = PBXGroup;
 			children = (
-				32A2D27C182820F500D3D31D /* PolynomialAssertion.h */,
-				32A2D27D182820F500D3D31D /* PolynomialData.h */,
-				32A2D27E182820F500D3D31D /* PolynomialPopulation.h */,
+				324A5D9F182839080052472E /* genetic */,
+				324A5DA3182839080052472E /* gui */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		324A5D9F182839080052472E /* genetic */ = {
+			isa = PBXGroup;
+			children = (
+				324A5DA2182839080052472E /* PolynomialPopulation.h */,
+				324A5DA0182839080052472E /* PolynomialAssertion.h */,
+				324A5DA1182839080052472E /* PolynomialData.h */,
 			);
 			path = genetic;
 			sourceTree = "<group>";
 		};
-		32A2D27F182820F500D3D31D /* gui */ = {
+		324A5DA3182839080052472E /* gui */ = {
 			isa = PBXGroup;
 			children = (
-				32A2D280182820F500D3D31D /* GuiBase.h */,
-				32A2D281182820F500D3D31D /* GuiPlot.h */,
-				32A2D282182820F500D3D31D /* GuiPlotData.h */,
-				32A2D283182820F500D3D31D /* GuiRect.h */,
-				32A2D284182820F500D3D31D /* GuiText.h */,
-				32A2D285182820F500D3D31D /* GuiTypography.h */,
+				324A5DA9182839080052472E /* GuiTypography.h */,
+				324A5DA4182839080052472E /* GuiBase.h */,
+				324A5DA7182839080052472E /* GuiRect.h */,
+				324A5DA8182839080052472E /* GuiText.h */,
+				324A5DA5182839080052472E /* GuiPlot.h */,
+				324A5DA6182839080052472E /* GuiPlotData.h */,
 			);
 			path = gui;
 			sourceTree = "<group>";
 		};
-		32A2D286182820F500D3D31D /* src */ = {
+		324A5DAA182839080052472E /* src */ = {
 			isa = PBXGroup;
 			children = (
-				32A2D287182820F500D3D31D /* genetic */,
-				32A2D28B182820F500D3D31D /* gui */,
+				324A5DAB182839080052472E /* genetic */,
+				324A5DAF182839080052472E /* gui */,
 			);
-			name = src;
-			path = ../../../../src;
+			path = src;
 			sourceTree = "<group>";
 		};
-		32A2D287182820F500D3D31D /* genetic */ = {
+		324A5DAB182839080052472E /* genetic */ = {
 			isa = PBXGroup;
 			children = (
-				32A2D288182820F500D3D31D /* PolynomialAssertion.cpp */,
-				32A2D289182820F500D3D31D /* PolynomialData.cpp */,
-				32A2D28A182820F500D3D31D /* PolynomialPopulation.cpp */,
+				324A5DAE182839080052472E /* PolynomialPopulation.cpp */,
+				324A5DAC182839080052472E /* PolynomialAssertion.cpp */,
+				324A5DAD182839080052472E /* PolynomialData.cpp */,
 			);
 			path = genetic;
 			sourceTree = "<group>";
 		};
-		32A2D28B182820F500D3D31D /* gui */ = {
+		324A5DAF182839080052472E /* gui */ = {
 			isa = PBXGroup;
 			children = (
-				32A2D28C182820F500D3D31D /* GuiBase.cpp */,
-				32A2D28D182820F500D3D31D /* GuiPlot.cpp */,
-				32A2D28E182820F500D3D31D /* GuiPlotData.cpp */,
-				32A2D28F182820F500D3D31D /* GuiRect.cpp */,
-				32A2D290182820F500D3D31D /* GuiText.cpp */,
-				32A2D291182820F500D3D31D /* GuiTypography.cpp */,
+				324A5DB5182839080052472E /* GuiTypography.cpp */,
+				324A5DB0182839080052472E /* GuiBase.cpp */,
+				324A5DB3182839080052472E /* GuiRect.cpp */,
+				324A5DB4182839080052472E /* GuiText.cpp */,
+				324A5DB1182839080052472E /* GuiPlot.cpp */,
+				324A5DB2182839080052472E /* GuiPlotData.cpp */,
 			);
 			path = gui;
 			sourceTree = "<group>";
@@ -302,16 +309,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32A2D295182820F500D3D31D /* GuiBase.cpp in Sources */,
-				32A2D294182820F500D3D31D /* PolynomialPopulation.cpp in Sources */,
-				32A2D29A182820F500D3D31D /* GuiTypography.cpp in Sources */,
-				32A2D296182820F500D3D31D /* GuiPlot.cpp in Sources */,
-				32A2D293182820F500D3D31D /* PolynomialData.cpp in Sources */,
-				32A2D292182820F500D3D31D /* PolynomialAssertion.cpp in Sources */,
+				324A5DB9182839080052472E /* GuiBase.cpp in Sources */,
+				324A5DBC182839080052472E /* GuiRect.cpp in Sources */,
+				324A5DBA182839080052472E /* GuiPlot.cpp in Sources */,
+				324A5DBE182839080052472E /* GuiTypography.cpp in Sources */,
+				324A5DB6182839080052472E /* PolynomialAssertion.cpp in Sources */,
+				324A5DBD182839080052472E /* GuiText.cpp in Sources */,
 				986282105D2E43B29DB9C21C /* PolynomialEvolutionApp.cpp in Sources */,
-				32A2D297182820F500D3D31D /* GuiPlotData.cpp in Sources */,
-				32A2D298182820F500D3D31D /* GuiRect.cpp in Sources */,
-				32A2D299182820F500D3D31D /* GuiText.cpp in Sources */,
+				324A5DB7182839080052472E /* PolynomialData.cpp in Sources */,
+				324A5DB8182839080052472E /* PolynomialPopulation.cpp in Sources */,
+				324A5DBB182839080052472E /* GuiPlotData.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

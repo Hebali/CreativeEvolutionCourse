@@ -1,0 +1,111 @@
+\hypertarget{class_polynomial_data}{\section{Polynomial\-Data Class Reference}
+\label{class_polynomial_data}\index{Polynomial\-Data@{Polynomial\-Data}}
+}
+
+
+A class representing a polynomial function.  
+
+
+
+
+{\ttfamily \#include $<$Polynomial\-Data.\-h$>$}
+
+Inheritance diagram for Polynomial\-Data\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_polynomial_data}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_polynomial_data_aa51d94a0bfb9c8a6a22b6f42bc876b86}{typedef std\-::pair$<$ float, float $>$ \hyperlink{class_polynomial_data_aa51d94a0bfb9c8a6a22b6f42bc876b86}{Component\-Pair}}\label{class_polynomial_data_aa51d94a0bfb9c8a6a22b6f42bc876b86}
+
+\begin{DoxyCompactList}\small\item\em A $<$Coefficient,Exponent$>$ pair. \end{DoxyCompactList}\item 
+\hypertarget{class_polynomial_data_aa29043ac29b9eefb530b6671be625814}{typedef std\-::vector\\*
+$<$ \hyperlink{class_polynomial_data_aa51d94a0bfb9c8a6a22b6f42bc876b86}{Component\-Pair} $>$ \hyperlink{class_polynomial_data_aa29043ac29b9eefb530b6671be625814}{Component\-Vec}}\label{class_polynomial_data_aa29043ac29b9eefb530b6671be625814}
+
+\begin{DoxyCompactList}\small\item\em A vector of $<$Coefficient,Exponent$>$ pairs. \end{DoxyCompactList}\item 
+\hypertarget{class_polynomial_data_a5ae869760aeed6d622bd0229b8eb8d76}{typedef Component\-Vec\-::iterator \hyperlink{class_polynomial_data_a5ae869760aeed6d622bd0229b8eb8d76}{Component\-Vec\-Iter}}\label{class_polynomial_data_a5ae869760aeed6d622bd0229b8eb8d76}
+
+\begin{DoxyCompactList}\small\item\em An iterator type for a vector of $<$Coefficient,Exponent$>$ pairs. \end{DoxyCompactList}\item 
+\hypertarget{class_polynomial_data_a82be1374bb854aca018846d21094125e}{typedef \\*
+Component\-Vec\-::reverse\-\_\-iterator \hyperlink{class_polynomial_data_a82be1374bb854aca018846d21094125e}{Component\-Vec\-Riter}}\label{class_polynomial_data_a82be1374bb854aca018846d21094125e}
+
+\begin{DoxyCompactList}\small\item\em A reverse iterator type for a vector of $<$Coefficient,Exponent$>$ pairs. \end{DoxyCompactList}\item 
+\hypertarget{class_polynomial_data_a7f77c4a643aa4b9fde19201969f8d787}{typedef \\*
+Component\-Vec\-::const\-\_\-iterator \hyperlink{class_polynomial_data_a7f77c4a643aa4b9fde19201969f8d787}{Component\-Vec\-Citer}}\label{class_polynomial_data_a7f77c4a643aa4b9fde19201969f8d787}
+
+\begin{DoxyCompactList}\small\item\em A const iterator type for a vector of $<$Coefficient,Exponent$>$ pairs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_polynomial_data_a2daf3355859ebb0886433ceab3276a7f}{\hyperlink{class_polynomial_data_a2daf3355859ebb0886433ceab3276a7f}{Polynomial\-Data} (const float \&i\-Param\-In=0.\-0, const float \&i\-Param\-Out=1.\-0, const bool \&i\-Draw\-Formula=true, const bool \&i\-Draw\-Deriv=true, const ci\-::\-Color\-A \&i\-Color=ci\-::\-Color\-A\-::white(), const float \&i\-Stroke\-Weight=3.\-0)}\label{class_polynomial_data_a2daf3355859ebb0886433ceab3276a7f}
+
+\begin{DoxyCompactList}\small\item\em Basic Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_polynomial_data_ae89bd56d2a8c7237b4688b4139f994cf}{virtual \hyperlink{class_polynomial_data_ae89bd56d2a8c7237b4688b4139f994cf}{$\sim$\-Polynomial\-Data} ()}\label{class_polynomial_data_ae89bd56d2a8c7237b4688b4139f994cf}
+
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+\hypertarget{class_polynomial_data_ae6d60ae0791f477e4fd59d6694a38c2e}{virtual \hyperlink{class_plotter_data}{Plotter\-Data} $\ast$ \hyperlink{class_polynomial_data_ae6d60ae0791f477e4fd59d6694a38c2e}{clone} ()}\label{class_polynomial_data_ae6d60ae0791f477e4fd59d6694a38c2e}
+
+\begin{DoxyCompactList}\small\item\em Returns a clone of this item. \end{DoxyCompactList}\item 
+\hypertarget{class_polynomial_data_ad47bf7c086d64fef6c01e5542f47da79}{virtual void \hyperlink{class_polynomial_data_ad47bf7c086d64fef6c01e5542f47da79}{draw} ()}\label{class_polynomial_data_ad47bf7c086d64fef6c01e5542f47da79}
+
+\begin{DoxyCompactList}\small\item\em An overloadable draw method. \end{DoxyCompactList}\item 
+\hypertarget{class_polynomial_data_addcf3ab3c6147919c43f44dd9af97db7}{void \hyperlink{class_polynomial_data_addcf3ab3c6147919c43f44dd9af97db7}{set\-Draw\-Parameters} (const float \&i\-Param\-In, const float \&i\-Param\-Out, const bool \&i\-Draw\-Formula=true, const bool \&i\-Draw\-Deriv=true, const ci\-::\-Color\-A \&i\-Color=ci\-::\-Color\-A\-::white(), const float \&i\-Stroke\-Weight=3.\-0)}\label{class_polynomial_data_addcf3ab3c6147919c43f44dd9af97db7}
+
+\begin{DoxyCompactList}\small\item\em Sets the parameter range for the drawing of the polynomial formula. \end{DoxyCompactList}\item 
+\hypertarget{class_polynomial_data_a67c459e29c65ea79be11c6b9a209c6f8}{void \hyperlink{class_polynomial_data_a67c459e29c65ea79be11c6b9a209c6f8}{add\-Component} (const float \&i\-Coeff, const float \&i\-Expon)}\label{class_polynomial_data_a67c459e29c65ea79be11c6b9a209c6f8}
+
+\begin{DoxyCompactList}\small\item\em Adds a component with the given coefficient and exponent values to the formula. \end{DoxyCompactList}\item 
+\hypertarget{class_polynomial_data_ac2e4d723d0cde539326924933d34672a}{\hyperlink{class_polynomial_data_aa29043ac29b9eefb530b6671be625814}{Component\-Vec} \& \hyperlink{class_polynomial_data_ac2e4d723d0cde539326924933d34672a}{get\-Components} ()}\label{class_polynomial_data_ac2e4d723d0cde539326924933d34672a}
+
+\begin{DoxyCompactList}\small\item\em Returns a reference to the components vector. \end{DoxyCompactList}\item 
+\hypertarget{class_polynomial_data_ac34cf450bc6544e3b38aaeb3505f7f8d}{const \hyperlink{class_polynomial_data_aa29043ac29b9eefb530b6671be625814}{Component\-Vec} \& \hyperlink{class_polynomial_data_ac34cf450bc6544e3b38aaeb3505f7f8d}{get\-Components} () const }\label{class_polynomial_data_ac34cf450bc6544e3b38aaeb3505f7f8d}
+
+\begin{DoxyCompactList}\small\item\em Returns a const reference to the components vector. \end{DoxyCompactList}\item 
+\hypertarget{class_polynomial_data_ab04af5acc429792d65564a05b677aac1}{float \hyperlink{class_polynomial_data_ab04af5acc429792d65564a05b677aac1}{get\-Value} (const float \&i\-Param) const }\label{class_polynomial_data_ab04af5acc429792d65564a05b677aac1}
+
+\begin{DoxyCompactList}\small\item\em Computes the output value for a given input. \end{DoxyCompactList}\item 
+\hypertarget{class_polynomial_data_a8a5e239056596df41ff680e553b04f78}{float \hyperlink{class_polynomial_data_a8a5e239056596df41ff680e553b04f78}{get\-Derivative\-Value} (const float \&i\-Param) const }\label{class_polynomial_data_a8a5e239056596df41ff680e553b04f78}
+
+\begin{DoxyCompactList}\small\item\em Computes the derivative of the output value for a given input. \end{DoxyCompactList}\item 
+\hypertarget{class_polynomial_data_a5ef4f78a9e1e486ada0c97876a81c346}{std\-::string \hyperlink{class_polynomial_data_a5ef4f78a9e1e486ada0c97876a81c346}{get\-Formula\-String} () const }\label{class_polynomial_data_a5ef4f78a9e1e486ada0c97876a81c346}
+
+\begin{DoxyCompactList}\small\item\em Returns a textual representation of the formula. \end{DoxyCompactList}\item 
+\hypertarget{class_polynomial_data_a245b3a198847a4f393e9017f428bb52b}{std\-::string \hyperlink{class_polynomial_data_a245b3a198847a4f393e9017f428bb52b}{get\-Derivative\-Formula\-String} () const }\label{class_polynomial_data_a245b3a198847a4f393e9017f428bb52b}
+
+\begin{DoxyCompactList}\small\item\em Returns a textual representation of the derivative formula. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_polynomial_data_aa2a30c7dffdb123c572ad60b3af70f51}{\hyperlink{class_polynomial_data_aa29043ac29b9eefb530b6671be625814}{Component\-Vec} \hyperlink{class_polynomial_data_aa2a30c7dffdb123c572ad60b3af70f51}{m\-Components}}\label{class_polynomial_data_aa2a30c7dffdb123c572ad60b3af70f51}
+
+\begin{DoxyCompactList}\small\item\em The formula's components. \end{DoxyCompactList}\item 
+\hypertarget{class_polynomial_data_af989f08bb8d62cd2ed704eb44f9b3adf}{size\-\_\-t \hyperlink{class_polynomial_data_af989f08bb8d62cd2ed704eb44f9b3adf}{m\-Draw\-Samples}}\label{class_polynomial_data_af989f08bb8d62cd2ed704eb44f9b3adf}
+
+\begin{DoxyCompactList}\small\item\em The number of samples to be plotted. \end{DoxyCompactList}\item 
+\hypertarget{class_polynomial_data_a5190d5ec249c05a426080991d357e40f}{float \hyperlink{class_polynomial_data_a5190d5ec249c05a426080991d357e40f}{m\-Draw\-Range\-In}}\label{class_polynomial_data_a5190d5ec249c05a426080991d357e40f}
+
+\begin{DoxyCompactList}\small\item\em The beginning of the param range. \end{DoxyCompactList}\item 
+\hypertarget{class_polynomial_data_abff5e934de5f2cc78876e2da2f0867f1}{float \hyperlink{class_polynomial_data_abff5e934de5f2cc78876e2da2f0867f1}{m\-Draw\-Range\-Out}}\label{class_polynomial_data_abff5e934de5f2cc78876e2da2f0867f1}
+
+\begin{DoxyCompactList}\small\item\em The end of the param range. \end{DoxyCompactList}\item 
+\hypertarget{class_polynomial_data_ace6de172472e4b95b76d13dd21f999da}{bool \hyperlink{class_polynomial_data_ace6de172472e4b95b76d13dd21f999da}{m\-Draw\-Formula}}\label{class_polynomial_data_ace6de172472e4b95b76d13dd21f999da}
+
+\begin{DoxyCompactList}\small\item\em Flags whether formula data should be drawn. \end{DoxyCompactList}\item 
+\hypertarget{class_polynomial_data_a665a958ff21bf9969f842eb95818e891}{bool \hyperlink{class_polynomial_data_a665a958ff21bf9969f842eb95818e891}{m\-Draw\-Deriv}}\label{class_polynomial_data_a665a958ff21bf9969f842eb95818e891}
+
+\begin{DoxyCompactList}\small\item\em Flags whether derivative data should be drawn. \end{DoxyCompactList}\item 
+\hypertarget{class_polynomial_data_a278f68eb6b129f4635dd5bdbeef62ff6}{bool \hyperlink{class_polynomial_data_a278f68eb6b129f4635dd5bdbeef62ff6}{m\-Dirty}}\label{class_polynomial_data_a278f68eb6b129f4635dd5bdbeef62ff6}
+
+\begin{DoxyCompactList}\small\item\em Flags whether raster data needs updating. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class representing a polynomial function. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/\-Users/pjh/\-Desktop/\-Work/\-Teaching/\-Creative\-Evolution\-Course/core/include/genetic/Polynomial\-Data.\-h\item 
+/\-Users/pjh/\-Desktop/\-Work/\-Teaching/\-Creative\-Evolution\-Course/core/src/genetic/Polynomial\-Data.\-cpp\end{DoxyCompactItemize}

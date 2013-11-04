@@ -30,13 +30,13 @@ public:
 	void shutdown();
 	
 	FontSuitcase*			mSuitcase;
-	UiBase*					mScene;
-	UiText*					mInfoLabel;
+	GuiBase*					mScene;
+	GuiText*					mInfoLabel;
 	
 	PolynomialPopulation*	mPopulation;
 	PolynomialDataRef		mBest;
 	
-	UiPlot*					mPlotRef;
+	GuiPlot*					mPlotRef;
 };
 
 void PolynomialEvolutionApp::prepareSettings(Settings* settings)
@@ -57,11 +57,11 @@ void PolynomialEvolutionApp::setup()
 						 getAssetPath( "Heuristica-Bold.otf" ).string(),
 						 getAssetPath( "Heuristica-BoldItalic.otf" ).string() );
 	
-	mScene = new UiBase();
+	mScene = new GuiBase();
 	mScene->setPosition( Vec2f( 0.0, 0.0 ) );
 	mScene->setRelativeDimension( Vec2f( 1.0, 1.0 ) );
 	
-	mInfoLabel = new UiText( "", "Heuristica", 14, FontStyle::BOLD, mSuitcase );
+	mInfoLabel = new GuiText( "", "Heuristica", 14, FontStyle::BOLD, mSuitcase );
 	mInfoLabel->setRelativePosition( Vec2f( 0.5, 1.0 ) );
 	mInfoLabel->setTextColor( ColorA::white() );
 	mInfoLabel->setHighlightColor( ColorA( 0.0, 0.0, 0.0, 0.5 ) );
@@ -99,7 +99,7 @@ void PolynomialEvolutionApp::setup()
 	mPopulation = new PolynomialPopulation( tAssertGroup, 1000, 500, 0.1, 1.0 );
 	
 	{
-		mPlotRef = new UiPlot( "Heuristica", mSuitcase );
+		mPlotRef = new GuiPlot( "Heuristica", mSuitcase );
 		mPlotRef->addInput( tFormula );
 		mPlotRef->addInput( tAssertFormulaA );
 		mPlotRef->addInput( tAssertFormulaB );

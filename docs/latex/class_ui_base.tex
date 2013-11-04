@@ -1,0 +1,223 @@
+\hypertarget{class_ui_base}{\section{Ui\-Base Class Reference}
+\label{class_ui_base}\index{Ui\-Base@{Ui\-Base}}
+}
+
+
+A basic two-\/dimensional scenegraph node.  
+
+
+
+
+{\ttfamily \#include $<$Gui\-Base.\-h$>$}
+
+Inheritance diagram for Ui\-Base\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_ui_base}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_ui_base_a9a56b225c8af039ff8a5e678cf4668d2}{typedef std\-::deque$<$ \hyperlink{class_ui_base}{Ui\-Base} $\ast$ $>$ \hyperlink{class_ui_base_a9a56b225c8af039ff8a5e678cf4668d2}{Ui\-Base\-Deque}}\label{class_ui_base_a9a56b225c8af039ff8a5e678cf4668d2}
+
+\begin{DoxyCompactList}\small\item\em A deque of Ui\-Base$\ast$ nodes. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_a99faa194bc56775ee6d2304093ef27a2}{typedef Ui\-Base\-Deque\-::iterator \hyperlink{class_ui_base_a99faa194bc56775ee6d2304093ef27a2}{Ui\-Base\-Deque\-Iter}}\label{class_ui_base_a99faa194bc56775ee6d2304093ef27a2}
+
+\begin{DoxyCompactList}\small\item\em An iterator type for a deque of Ui\-Base$\ast$ nodes. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_a53ee609f4ed04af64913c073cd13037a}{typedef \\*
+Ui\-Base\-Deque\-::reverse\-\_\-iterator \hyperlink{class_ui_base_a53ee609f4ed04af64913c073cd13037a}{Ui\-Base\-Deque\-Riter}}\label{class_ui_base_a53ee609f4ed04af64913c073cd13037a}
+
+\begin{DoxyCompactList}\small\item\em A reverse iterator type for a deque of Ui\-Base$\ast$ nodes. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_a2e4fc2ca9076cc7c26ecefec9d3d5476}{typedef Ui\-Base\-Deque\-::const\-\_\-iterator \hyperlink{class_ui_base_a2e4fc2ca9076cc7c26ecefec9d3d5476}{Ui\-Base\-Deque\-Citer}}\label{class_ui_base_a2e4fc2ca9076cc7c26ecefec9d3d5476}
+
+\begin{DoxyCompactList}\small\item\em A const iterator type for a deque of Ui\-Base$\ast$ nodes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_ui_base_aa35daf5ae2718e027d4ab20458422fa5}{\hyperlink{class_ui_base_aa35daf5ae2718e027d4ab20458422fa5}{Ui\-Base} ()}\label{class_ui_base_aa35daf5ae2718e027d4ab20458422fa5}
+
+\begin{DoxyCompactList}\small\item\em Basic constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_acb1205d916c03f8adef8d1b8e9a7c845}{virtual \hyperlink{class_ui_base_acb1205d916c03f8adef8d1b8e9a7c845}{$\sim$\-Ui\-Base} ()}\label{class_ui_base_acb1205d916c03f8adef8d1b8e9a7c845}
+
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_a892c9cdf2806b1ad5e901fe6b4647d2f}{void \hyperlink{class_ui_base_a892c9cdf2806b1ad5e901fe6b4647d2f}{set\-Name} (const std\-::string \&i\-Name)}\label{class_ui_base_a892c9cdf2806b1ad5e901fe6b4647d2f}
+
+\begin{DoxyCompactList}\small\item\em Sets the node's name label. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_a3123da01bae418158015a6ebc7a584a3}{const std\-::string \& \hyperlink{class_ui_base_a3123da01bae418158015a6ebc7a584a3}{get\-Name} ()}\label{class_ui_base_a3123da01bae418158015a6ebc7a584a3}
+
+\begin{DoxyCompactList}\small\item\em Returns the node's name label. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_a96e43e72b7f0cb7f6ad5b2e2ed1cda2b}{void \hyperlink{class_ui_base_a96e43e72b7f0cb7f6ad5b2e2ed1cda2b}{set\-Visibility} (const bool \&i\-Visible)}\label{class_ui_base_a96e43e72b7f0cb7f6ad5b2e2ed1cda2b}
+
+\begin{DoxyCompactList}\small\item\em Sets the node's visibility status. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_accd4e1963e03fcc920b5f4af63d1f404}{bool \hyperlink{class_ui_base_accd4e1963e03fcc920b5f4af63d1f404}{get\-Visibility} () const }\label{class_ui_base_accd4e1963e03fcc920b5f4af63d1f404}
+
+\begin{DoxyCompactList}\small\item\em Returns the node's visibility status. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_a7590087a54659041f4909c7d9206df60}{void \hyperlink{class_ui_base_a7590087a54659041f4909c7d9206df60}{deep\-Draw} ()}\label{class_ui_base_a7590087a54659041f4909c7d9206df60}
+
+\begin{DoxyCompactList}\small\item\em The node's deep draw handler. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_a8f64c5bdf4888c2cbd95ee2236aac355}{virtual void \hyperlink{class_ui_base_a8f64c5bdf4888c2cbd95ee2236aac355}{draw} ()}\label{class_ui_base_a8f64c5bdf4888c2cbd95ee2236aac355}
+
+\begin{DoxyCompactList}\small\item\em An overloadable draw method. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_a28f0ee22de1af829ec3808fada5ddfa6}{bool \hyperlink{class_ui_base_a28f0ee22de1af829ec3808fada5ddfa6}{deep\-Mouse\-Move} (ci\-::app\-::\-Mouse\-Event i\-Event)}\label{class_ui_base_a28f0ee22de1af829ec3808fada5ddfa6}
+
+\begin{DoxyCompactList}\small\item\em The node's deep event-\/handler for mouse\-Move events. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_a691fa41ed84361fe816800b1014b60b7}{bool \hyperlink{class_ui_base_a691fa41ed84361fe816800b1014b60b7}{deep\-Mouse\-Down} (ci\-::app\-::\-Mouse\-Event i\-Event)}\label{class_ui_base_a691fa41ed84361fe816800b1014b60b7}
+
+\begin{DoxyCompactList}\small\item\em The node's deep event-\/handler for mouse\-Down events. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_ad6e6bde57af053a2ed54749fef1a0e25}{bool \hyperlink{class_ui_base_ad6e6bde57af053a2ed54749fef1a0e25}{deep\-Mouse\-Drag} (ci\-::app\-::\-Mouse\-Event i\-Event)}\label{class_ui_base_ad6e6bde57af053a2ed54749fef1a0e25}
+
+\begin{DoxyCompactList}\small\item\em The node's deep event-\/handler for mouse\-Drag events. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_a39080713a4b933f1316c06f3c30cec07}{bool \hyperlink{class_ui_base_a39080713a4b933f1316c06f3c30cec07}{deep\-Mouse\-Up} (ci\-::app\-::\-Mouse\-Event i\-Event)}\label{class_ui_base_a39080713a4b933f1316c06f3c30cec07}
+
+\begin{DoxyCompactList}\small\item\em The node's deep event-\/handler for mouse\-Up events. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_a83db01e2ef463e4863e644902720123e}{virtual bool \hyperlink{class_ui_base_a83db01e2ef463e4863e644902720123e}{mouse\-Move} (ci\-::app\-::\-Mouse\-Event i\-Event)}\label{class_ui_base_a83db01e2ef463e4863e644902720123e}
+
+\begin{DoxyCompactList}\small\item\em An overloadable event-\/handler for mouse\-Move events. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_a054e1aa9ccc25882d21205a59fea201d}{virtual bool \hyperlink{class_ui_base_a054e1aa9ccc25882d21205a59fea201d}{mouse\-Down} (ci\-::app\-::\-Mouse\-Event i\-Event)}\label{class_ui_base_a054e1aa9ccc25882d21205a59fea201d}
+
+\begin{DoxyCompactList}\small\item\em An overloadable event-\/handler for mouse\-Down events. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_af36176bd7a0db525f1a03a58617af5df}{virtual bool \hyperlink{class_ui_base_af36176bd7a0db525f1a03a58617af5df}{mouse\-Drag} (ci\-::app\-::\-Mouse\-Event i\-Event)}\label{class_ui_base_af36176bd7a0db525f1a03a58617af5df}
+
+\begin{DoxyCompactList}\small\item\em An overloadable event-\/handler for mouse\-Drag events. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_a5f452e72bcb3cdbfcb05eba8e4c71412}{virtual bool \hyperlink{class_ui_base_a5f452e72bcb3cdbfcb05eba8e4c71412}{mouse\-Up} (ci\-::app\-::\-Mouse\-Event i\-Event)}\label{class_ui_base_a5f452e72bcb3cdbfcb05eba8e4c71412}
+
+\begin{DoxyCompactList}\small\item\em An overloadable event-\/handler for mouse\-Up events. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_a563a0c240ec1f14553ca0cb8571bc468}{bool \hyperlink{class_ui_base_a563a0c240ec1f14553ca0cb8571bc468}{deep\-Key\-Down} (ci\-::app\-::\-Key\-Event i\-Event)}\label{class_ui_base_a563a0c240ec1f14553ca0cb8571bc468}
+
+\begin{DoxyCompactList}\small\item\em The node's deep event-\/handler for key\-Down events. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_a874b642876ef17a5660f02b8380c24b3}{bool \hyperlink{class_ui_base_a874b642876ef17a5660f02b8380c24b3}{deep\-Key\-Up} (ci\-::app\-::\-Key\-Event i\-Event)}\label{class_ui_base_a874b642876ef17a5660f02b8380c24b3}
+
+\begin{DoxyCompactList}\small\item\em The node's deep event-\/handler for key\-Up events. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_afd29ddc65f846a2bc26eeb9a67f4dd75}{virtual bool \hyperlink{class_ui_base_afd29ddc65f846a2bc26eeb9a67f4dd75}{key\-Down} (ci\-::app\-::\-Key\-Event i\-Event)}\label{class_ui_base_afd29ddc65f846a2bc26eeb9a67f4dd75}
+
+\begin{DoxyCompactList}\small\item\em An overloadable event-\/handler for key\-Down events. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_a9833411b2be78b4afd0162d5c0ca5c50}{virtual bool \hyperlink{class_ui_base_a9833411b2be78b4afd0162d5c0ca5c50}{key\-Up} (ci\-::app\-::\-Key\-Event i\-Event)}\label{class_ui_base_a9833411b2be78b4afd0162d5c0ca5c50}
+
+\begin{DoxyCompactList}\small\item\em An overloadable event-\/handler for key\-Up events. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_a6cee2a3fc3dc666f211ae40ad080421a}{bool \hyperlink{class_ui_base_a6cee2a3fc3dc666f211ae40ad080421a}{has\-Parent} () const }\label{class_ui_base_a6cee2a3fc3dc666f211ae40ad080421a}
+
+\begin{DoxyCompactList}\small\item\em Returns true if the node has a parent node. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_a2fc696f237cf6d672b47f83783301b48}{\hyperlink{class_ui_base}{Ui\-Base} $\ast$ \hyperlink{class_ui_base_a2fc696f237cf6d672b47f83783301b48}{get\-Parent} () const }\label{class_ui_base_a2fc696f237cf6d672b47f83783301b48}
+
+\begin{DoxyCompactList}\small\item\em Returns the node's parent if one exists, otherwise N\-U\-L\-L. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_a8382855e57634659c515d9919e797059}{void \hyperlink{class_ui_base_a8382855e57634659c515d9919e797059}{set\-Parent} (\hyperlink{class_ui_base}{Ui\-Base} $\ast$i\-Parent)}\label{class_ui_base_a8382855e57634659c515d9919e797059}
+
+\begin{DoxyCompactList}\small\item\em Sets the node's parent. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_ab337ea219716fea8836a1ff99b3ea07f}{bool \hyperlink{class_ui_base_ab337ea219716fea8836a1ff99b3ea07f}{has\-Children} () const }\label{class_ui_base_ab337ea219716fea8836a1ff99b3ea07f}
+
+\begin{DoxyCompactList}\small\item\em Returns true if the node has children nodes. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_a1dad56e383dacec4cc29be087ceb4af4}{\hyperlink{class_ui_base_a9a56b225c8af039ff8a5e678cf4668d2}{Ui\-Base\-Deque} \& \hyperlink{class_ui_base_a1dad56e383dacec4cc29be087ceb4af4}{get\-Children} ()}\label{class_ui_base_a1dad56e383dacec4cc29be087ceb4af4}
+
+\begin{DoxyCompactList}\small\item\em Returns a reference to the child node deque. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_afa7c1ea5f4ee94c3d6d64f6e6a3e0d92}{const \hyperlink{class_ui_base_a9a56b225c8af039ff8a5e678cf4668d2}{Ui\-Base\-Deque} \& \hyperlink{class_ui_base_afa7c1ea5f4ee94c3d6d64f6e6a3e0d92}{get\-Children} () const }\label{class_ui_base_afa7c1ea5f4ee94c3d6d64f6e6a3e0d92}
+
+\begin{DoxyCompactList}\small\item\em Returns a const reference to the child node deque. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_a5afb36ad174cccfa9550827e438d65f3}{void \hyperlink{class_ui_base_a5afb36ad174cccfa9550827e438d65f3}{add\-Child} (\hyperlink{class_ui_base}{Ui\-Base} $\ast$i\-Child)}\label{class_ui_base_a5afb36ad174cccfa9550827e438d65f3}
+
+\begin{DoxyCompactList}\small\item\em Adds the given node as a child of this node. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_a3794d9b40ff778c34f855c708c0c8e79}{void \hyperlink{class_ui_base_a3794d9b40ff778c34f855c708c0c8e79}{set\-Position} (const ci\-::\-Vec2f \&i\-Position)}\label{class_ui_base_a3794d9b40ff778c34f855c708c0c8e79}
+
+\begin{DoxyCompactList}\small\item\em Sets the node's fixed position. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_ad4b04187ce4df44e9b124628a0acc65f}{void \hyperlink{class_ui_base_ad4b04187ce4df44e9b124628a0acc65f}{set\-Position} (const float \&i\-Position\-X, const float \&i\-Position\-Y)}\label{class_ui_base_ad4b04187ce4df44e9b124628a0acc65f}
+
+\begin{DoxyCompactList}\small\item\em Sets the node's fixed position. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_a76c6d59b105c3d4a0e785545ca2471d4}{void \hyperlink{class_ui_base_a76c6d59b105c3d4a0e785545ca2471d4}{set\-Position\-X} (const float \&i\-Position\-X)}\label{class_ui_base_a76c6d59b105c3d4a0e785545ca2471d4}
+
+\begin{DoxyCompactList}\small\item\em Sets the node's fixed x-\/position. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_a56f534917bcaaf8c55544d883a801f38}{void \hyperlink{class_ui_base_a56f534917bcaaf8c55544d883a801f38}{set\-Position\-Y} (const float \&i\-Position\-Y)}\label{class_ui_base_a56f534917bcaaf8c55544d883a801f38}
+
+\begin{DoxyCompactList}\small\item\em Sets the node's fixed y-\/position. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_ab1f2a0901c5260172481aa0aa487c0b7}{void \hyperlink{class_ui_base_ab1f2a0901c5260172481aa0aa487c0b7}{set\-Relative\-Position} (const ci\-::\-Vec2f \&i\-Position)}\label{class_ui_base_ab1f2a0901c5260172481aa0aa487c0b7}
+
+\begin{DoxyCompactList}\small\item\em Sets the node's relative position. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_aae54f086ea3844e78ca75e88481ce5ae}{void \hyperlink{class_ui_base_aae54f086ea3844e78ca75e88481ce5ae}{set\-Relative\-Position} (const float \&i\-Position\-X, const float \&i\-Position\-Y)}\label{class_ui_base_aae54f086ea3844e78ca75e88481ce5ae}
+
+\begin{DoxyCompactList}\small\item\em Sets the node's relative position. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_ac0bf18ff3dbb20e0d9d3fcf580e82884}{void \hyperlink{class_ui_base_ac0bf18ff3dbb20e0d9d3fcf580e82884}{set\-Relative\-Position\-X} (const float \&i\-Position\-X)}\label{class_ui_base_ac0bf18ff3dbb20e0d9d3fcf580e82884}
+
+\begin{DoxyCompactList}\small\item\em Sets the node's relative x-\/position. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_a0969f3780af69d6deb1f537f9f7383e8}{void \hyperlink{class_ui_base_a0969f3780af69d6deb1f537f9f7383e8}{set\-Relative\-Position\-Y} (const float \&i\-Position\-Y)}\label{class_ui_base_a0969f3780af69d6deb1f537f9f7383e8}
+
+\begin{DoxyCompactList}\small\item\em Sets the node's relative y-\/position. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_a6e3803f7b6f6940c9137407da541087f}{ci\-::\-Vec2f \hyperlink{class_ui_base_a6e3803f7b6f6940c9137407da541087f}{get\-Position} () const }\label{class_ui_base_a6e3803f7b6f6940c9137407da541087f}
+
+\begin{DoxyCompactList}\small\item\em Returns the node's screen position. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_a8a65bb2e11001082883cdf36a36013f0}{ci\-::\-Vec2f \hyperlink{class_ui_base_a8a65bb2e11001082883cdf36a36013f0}{get\-Local\-Position} () const }\label{class_ui_base_a8a65bb2e11001082883cdf36a36013f0}
+
+\begin{DoxyCompactList}\small\item\em Returns the node's local position within its parent. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_a9282497df8eca1933674b4bb8eeacbc5}{void \hyperlink{class_ui_base_a9282497df8eca1933674b4bb8eeacbc5}{set\-Dimension} (const ci\-::\-Vec2f \&i\-Dimension)}\label{class_ui_base_a9282497df8eca1933674b4bb8eeacbc5}
+
+\begin{DoxyCompactList}\small\item\em Sets the node's fixed dimension. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_a7bdda6f15ffe5f17eaf5a1346d5001b2}{void \hyperlink{class_ui_base_a7bdda6f15ffe5f17eaf5a1346d5001b2}{set\-Dimension} (const float \&i\-Dimension\-X, const float \&i\-Dimension\-Y)}\label{class_ui_base_a7bdda6f15ffe5f17eaf5a1346d5001b2}
+
+\begin{DoxyCompactList}\small\item\em Sets the node's fixed dimension. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_ae01d8a42ee5e97b469c57ef6b129e4d9}{void \hyperlink{class_ui_base_ae01d8a42ee5e97b469c57ef6b129e4d9}{set\-Dimension\-X} (const float \&i\-Dimension\-X)}\label{class_ui_base_ae01d8a42ee5e97b469c57ef6b129e4d9}
+
+\begin{DoxyCompactList}\small\item\em Sets the node's fixed x-\/dimension. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_a08796f637b3d044ab7b08f7c92cb1a84}{void \hyperlink{class_ui_base_a08796f637b3d044ab7b08f7c92cb1a84}{set\-Dimension\-Y} (const float \&i\-Dimension\-Y)}\label{class_ui_base_a08796f637b3d044ab7b08f7c92cb1a84}
+
+\begin{DoxyCompactList}\small\item\em Sets the node's fixed y-\/dimension. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_a3e7ab055d44abda72530a6a575a226df}{void \hyperlink{class_ui_base_a3e7ab055d44abda72530a6a575a226df}{set\-Relative\-Dimension} (const ci\-::\-Vec2f \&i\-Dimension)}\label{class_ui_base_a3e7ab055d44abda72530a6a575a226df}
+
+\begin{DoxyCompactList}\small\item\em Sets the node's relative dimension. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_adfc1187e43ffba5d98cca7110cc93336}{void \hyperlink{class_ui_base_adfc1187e43ffba5d98cca7110cc93336}{set\-Relative\-Dimension} (const float \&i\-Dimension\-X, const float \&i\-Dimension\-Y)}\label{class_ui_base_adfc1187e43ffba5d98cca7110cc93336}
+
+\begin{DoxyCompactList}\small\item\em Sets the node's relative dimension. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_ae3e672131583aae7defb4e91f4f26e94}{void \hyperlink{class_ui_base_ae3e672131583aae7defb4e91f4f26e94}{set\-Relative\-Dimension\-X} (const float \&i\-Dimension\-X)}\label{class_ui_base_ae3e672131583aae7defb4e91f4f26e94}
+
+\begin{DoxyCompactList}\small\item\em Sets the node's relative x-\/dimension. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_a60b0e32f60d41cc6e4f0ff62883eb8fb}{void \hyperlink{class_ui_base_a60b0e32f60d41cc6e4f0ff62883eb8fb}{set\-Relative\-Dimension\-Y} (const float \&i\-Dimension\-Y)}\label{class_ui_base_a60b0e32f60d41cc6e4f0ff62883eb8fb}
+
+\begin{DoxyCompactList}\small\item\em Sets the node's relative y-\/dimension. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_af2bb845a631dce0526c51df99fd0f0f5}{ci\-::\-Vec2f \hyperlink{class_ui_base_af2bb845a631dce0526c51df99fd0f0f5}{get\-Dimension} () const }\label{class_ui_base_af2bb845a631dce0526c51df99fd0f0f5}
+
+\begin{DoxyCompactList}\small\item\em Returns the node's screen dimension. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_af8b5e2e29164a9847c5fb23c02ffe098}{float \hyperlink{class_ui_base_af8b5e2e29164a9847c5fb23c02ffe098}{get\-Dimension\-X} () const }\label{class_ui_base_af8b5e2e29164a9847c5fb23c02ffe098}
+
+\begin{DoxyCompactList}\small\item\em Returns the node's screen x-\/dimension. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_a9375d0565a1137d1b2963dcd7c8bdd96}{float \hyperlink{class_ui_base_a9375d0565a1137d1b2963dcd7c8bdd96}{get\-Dimension\-Y} () const }\label{class_ui_base_a9375d0565a1137d1b2963dcd7c8bdd96}
+
+\begin{DoxyCompactList}\small\item\em Returns the node's screen y-\/dimension. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_ui_base_a614551f6b981316eed87f18016fdf2ea}{std\-::string \hyperlink{class_ui_base_a614551f6b981316eed87f18016fdf2ea}{m\-Name}}\label{class_ui_base_a614551f6b981316eed87f18016fdf2ea}
+
+\begin{DoxyCompactList}\small\item\em The node's name. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_a67321e80a0be7ade356d639896106475}{bool \hyperlink{class_ui_base_a67321e80a0be7ade356d639896106475}{m\-Visible}}\label{class_ui_base_a67321e80a0be7ade356d639896106475}
+
+\begin{DoxyCompactList}\small\item\em Flags whether the node is visible. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_add28a553e310fde40acc280686290350}{ci\-::\-Vec2f \hyperlink{class_ui_base_add28a553e310fde40acc280686290350}{m\-Position}}\label{class_ui_base_add28a553e310fde40acc280686290350}
+
+\begin{DoxyCompactList}\small\item\em The node's position (either absolute or relative) \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_a03b2566fd9b5c6f26d85f4befe313802}{ci\-::\-Vec2f \hyperlink{class_ui_base_a03b2566fd9b5c6f26d85f4befe313802}{m\-Dimension}}\label{class_ui_base_a03b2566fd9b5c6f26d85f4befe313802}
+
+\begin{DoxyCompactList}\small\item\em The node's dimension (either absolute or relative) \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_af87b700f299eb04b9def30b471c916c1}{Ui\-Flow \hyperlink{class_ui_base_af87b700f299eb04b9def30b471c916c1}{m\-Flow\-X}}\label{class_ui_base_af87b700f299eb04b9def30b471c916c1}
+
+\begin{DoxyCompactList}\small\item\em The node's flow type for its x-\/position parameter. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_aae06a3600f72830ef661465d022572ef}{Ui\-Flow \hyperlink{class_ui_base_aae06a3600f72830ef661465d022572ef}{m\-Flow\-Y}}\label{class_ui_base_aae06a3600f72830ef661465d022572ef}
+
+\begin{DoxyCompactList}\small\item\em The node's flow type for its y-\/position parameter. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_af8f47bdc8465b12fad332162c957357e}{Ui\-Flow \hyperlink{class_ui_base_af8f47bdc8465b12fad332162c957357e}{m\-Flow\-W}}\label{class_ui_base_af8f47bdc8465b12fad332162c957357e}
+
+\begin{DoxyCompactList}\small\item\em The node's flow type for its width parameter. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_a0d0579e8e5dd16cdf1b8ee7cdffaf198}{Ui\-Flow \hyperlink{class_ui_base_a0d0579e8e5dd16cdf1b8ee7cdffaf198}{m\-Flow\-H}}\label{class_ui_base_a0d0579e8e5dd16cdf1b8ee7cdffaf198}
+
+\begin{DoxyCompactList}\small\item\em The node's flow type for its height parameter. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_a2c6e6fd6ef64f0ec68a5801e86561cc2}{\hyperlink{class_ui_base}{Ui\-Base} $\ast$ \hyperlink{class_ui_base_a2c6e6fd6ef64f0ec68a5801e86561cc2}{m\-Parent}}\label{class_ui_base_a2c6e6fd6ef64f0ec68a5801e86561cc2}
+
+\begin{DoxyCompactList}\small\item\em A pointer to the node's parent. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_base_aa17396ca724618461a0e457a26a2b805}{\hyperlink{class_ui_base_a9a56b225c8af039ff8a5e678cf4668d2}{Ui\-Base\-Deque} \hyperlink{class_ui_base_aa17396ca724618461a0e457a26a2b805}{m\-Children}}\label{class_ui_base_aa17396ca724618461a0e457a26a2b805}
+
+\begin{DoxyCompactList}\small\item\em A deque of the node's children. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A basic two-\/dimensional scenegraph node. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/\-Users/pjh/\-Desktop/\-Work/\-Teaching/\-Creative\-Evolution\-Course/core/include/gui/Gui\-Base.\-h\item 
+/\-Users/pjh/\-Desktop/\-Work/\-Teaching/\-Creative\-Evolution\-Course/core/src/gui/Gui\-Base.\-cpp\end{DoxyCompactItemize}

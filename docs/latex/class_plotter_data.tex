@@ -1,0 +1,63 @@
+\hypertarget{class_plotter_data}{\section{Plotter\-Data Class Reference}
+\label{class_plotter_data}\index{Plotter\-Data@{Plotter\-Data}}
+}
+
+
+Base class representing data to be plotted by \hyperlink{class_gui_plot}{Gui\-Plot}.  
+
+
+
+
+{\ttfamily \#include $<$Gui\-Plot\-Data.\-h$>$}
+
+Inheritance diagram for Plotter\-Data\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_plotter_data}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_plotter_data_a28cb319f221a9d910d3b589b3e9ed39c}{\hyperlink{class_plotter_data_a28cb319f221a9d910d3b589b3e9ed39c}{Plotter\-Data} (const ci\-::\-Color\-A \&i\-Color=ci\-::\-Color\-A\-::white(), const float \&i\-Stroke\-Weight=3.\-0)}\label{class_plotter_data_a28cb319f221a9d910d3b589b3e9ed39c}
+
+\begin{DoxyCompactList}\small\item\em Basic constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_plotter_data_aa0843071635bab709d414e1c33896f82}{virtual \hyperlink{class_plotter_data_aa0843071635bab709d414e1c33896f82}{$\sim$\-Plotter\-Data} ()}\label{class_plotter_data_aa0843071635bab709d414e1c33896f82}
+
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+\hypertarget{class_plotter_data_a00d9c9a8a11688d545b7f1457ce52191}{virtual \hyperlink{class_plotter_data}{Plotter\-Data} $\ast$ \hyperlink{class_plotter_data_a00d9c9a8a11688d545b7f1457ce52191}{clone} ()}\label{class_plotter_data_a00d9c9a8a11688d545b7f1457ce52191}
+
+\begin{DoxyCompactList}\small\item\em Returns a clone of this item. \end{DoxyCompactList}\item 
+\hypertarget{class_plotter_data_aa6970736c980752a277d80a27481cb4f}{virtual void \hyperlink{class_plotter_data_aa6970736c980752a277d80a27481cb4f}{draw} ()}\label{class_plotter_data_aa6970736c980752a277d80a27481cb4f}
+
+\begin{DoxyCompactList}\small\item\em An overloadable draw method. \end{DoxyCompactList}\item 
+\hypertarget{class_plotter_data_a3c424fcea7e761a4fe0d91975ebf6fae}{void \hyperlink{class_plotter_data_a3c424fcea7e761a4fe0d91975ebf6fae}{set\-Stroke\-Color} (const ci\-::\-Color\-A \&i\-Color)}\label{class_plotter_data_a3c424fcea7e761a4fe0d91975ebf6fae}
+
+\begin{DoxyCompactList}\small\item\em Sets the data's stroke color. \end{DoxyCompactList}\item 
+\hypertarget{class_plotter_data_af9b81e09f4cb47e0dab3b01f3f1b0e72}{const ci\-::\-Color\-A \& \hyperlink{class_plotter_data_af9b81e09f4cb47e0dab3b01f3f1b0e72}{get\-Stroke\-Color} () const }\label{class_plotter_data_af9b81e09f4cb47e0dab3b01f3f1b0e72}
+
+\begin{DoxyCompactList}\small\item\em Returns the data's stroke color. \end{DoxyCompactList}\item 
+\hypertarget{class_plotter_data_a94c7a633258a0ff47d1cf9652cc1c4e1}{void \hyperlink{class_plotter_data_a94c7a633258a0ff47d1cf9652cc1c4e1}{set\-Stroke\-Weight} (const float \&i\-Stroke\-Weight)}\label{class_plotter_data_a94c7a633258a0ff47d1cf9652cc1c4e1}
+
+\begin{DoxyCompactList}\small\item\em Sets the data's stroke weight. \end{DoxyCompactList}\item 
+\hypertarget{class_plotter_data_a5c27e760e3df81fdc27386eb3cca804c}{const float \& \hyperlink{class_plotter_data_a5c27e760e3df81fdc27386eb3cca804c}{get\-Stroke\-Weight} () const }\label{class_plotter_data_a5c27e760e3df81fdc27386eb3cca804c}
+
+\begin{DoxyCompactList}\small\item\em Returns the data's stroke weight. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_plotter_data_a27a91db0e47c5beb3e7d63c9fffc33f2}{ci\-::\-Color\-A \hyperlink{class_plotter_data_a27a91db0e47c5beb3e7d63c9fffc33f2}{m\-Color}}\label{class_plotter_data_a27a91db0e47c5beb3e7d63c9fffc33f2}
+
+\begin{DoxyCompactList}\small\item\em The data's stroke color. \end{DoxyCompactList}\item 
+\hypertarget{class_plotter_data_adcca0cf31a02559715f6202bc22f4bd3}{float \hyperlink{class_plotter_data_adcca0cf31a02559715f6202bc22f4bd3}{m\-Stroke\-Weight}}\label{class_plotter_data_adcca0cf31a02559715f6202bc22f4bd3}
+
+\begin{DoxyCompactList}\small\item\em The data's stroke weight. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class representing data to be plotted by \hyperlink{class_gui_plot}{Gui\-Plot}. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/\-Users/pjh/\-Desktop/\-Work/\-Teaching/\-Creative\-Evolution\-Course/core/include/gui/Gui\-Plot\-Data.\-h\item 
+/\-Users/pjh/\-Desktop/\-Work/\-Teaching/\-Creative\-Evolution\-Course/core/src/gui/Gui\-Plot\-Data.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,53 @@
+\hypertarget{class_font_suitcase}{\section{Font\-Suitcase Class Reference}
+\label{class_font_suitcase}\index{Font\-Suitcase@{Font\-Suitcase}}
+}
+
+
+A wrapper for a collection of gl\-::\-Texture\-Font families.  
+
+
+
+
+{\ttfamily \#include $<$Gui\-Typography.\-h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_font_suitcase_ade68c58fa69acfbca34477adc97c595d}{typedef std\-::map$<$ std\-::string, \\*
+\hyperlink{class_font_family}{Font\-Family} $\ast$ $>$ \hyperlink{class_font_suitcase_ade68c58fa69acfbca34477adc97c595d}{Font\-Family\-Map}}\label{class_font_suitcase_ade68c58fa69acfbca34477adc97c595d}
+
+\begin{DoxyCompactList}\small\item\em A map type storing $<$std\-::string,Font\-Family$\ast$$>$ pairs. \end{DoxyCompactList}\item 
+\hypertarget{class_font_suitcase_a2f0379c4fd9b83cf6f2fd079bd708de8}{typedef Font\-Family\-Map\-::iterator \hyperlink{class_font_suitcase_a2f0379c4fd9b83cf6f2fd079bd708de8}{Font\-Family\-Map\-Iter}}\label{class_font_suitcase_a2f0379c4fd9b83cf6f2fd079bd708de8}
+
+\begin{DoxyCompactList}\small\item\em An iterator type for a map storing $<$std\-::string,Font\-Family$\ast$$>$ pairs. \end{DoxyCompactList}\item 
+\hypertarget{class_font_suitcase_a9edf05903ece41e412faef2e22837b7d}{typedef \\*
+Font\-Family\-Map\-::const\-\_\-iterator \hyperlink{class_font_suitcase_a9edf05903ece41e412faef2e22837b7d}{Font\-Family\-Map\-Citer}}\label{class_font_suitcase_a9edf05903ece41e412faef2e22837b7d}
+
+\begin{DoxyCompactList}\small\item\em A const iterator type for a map storing $<$std\-::string,Font\-Family$\ast$$>$ pairs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_font_suitcase_a7a8f4187809d2509d2e2042b327c845f}{\hyperlink{class_font_suitcase_a7a8f4187809d2509d2e2042b327c845f}{Font\-Suitcase} ()}\label{class_font_suitcase_a7a8f4187809d2509d2e2042b327c845f}
+
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_font_suitcase_af976ecaea23388d339df65a45297125d}{\hyperlink{class_font_suitcase_af976ecaea23388d339df65a45297125d}{$\sim$\-Font\-Suitcase} ()}\label{class_font_suitcase_af976ecaea23388d339df65a45297125d}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hypertarget{class_font_suitcase_afecc98e12efd6a21be39c273533f3a99}{void \hyperlink{class_font_suitcase_afecc98e12efd6a21be39c273533f3a99}{add\-Family} (const std\-::string \&i\-Family\-Name, std\-::string i\-Regular\-Src=\char`\"{}\char`\"{}, std\-::string i\-Italic\-Src=\char`\"{}\char`\"{}, std\-::string i\-Bold\-Src=\char`\"{}\char`\"{}, std\-::string i\-Bold\-Italic\-Src=\char`\"{}\char`\"{})}\label{class_font_suitcase_afecc98e12efd6a21be39c273533f3a99}
+
+\begin{DoxyCompactList}\small\item\em Adds a font family to the suitcase using the associated family name and file paths. \end{DoxyCompactList}\item 
+\hypertarget{class_font_suitcase_ab549697f57176702d295d206ae814062}{\hyperlink{class_font_family}{Font\-Family} $\ast$ \hyperlink{class_font_suitcase_ab549697f57176702d295d206ae814062}{get\-Family\-Ref} (const std\-::string \&i\-Family\-Name)}\label{class_font_suitcase_ab549697f57176702d295d206ae814062}
+
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the font family with the given input name. \end{DoxyCompactList}\item 
+\hypertarget{class_font_suitcase_ad71b7b70960ecdba8ad45cf13de7ee39}{ci\-::gl\-::\-Texture\-Font\-Ref \hyperlink{class_font_suitcase_ad71b7b70960ecdba8ad45cf13de7ee39}{get\-Font\-Ref} (const std\-::string \&i\-Family\-Name, const int \&i\-Size, const Font\-Style \&i\-Style)}\label{class_font_suitcase_ad71b7b70960ecdba8ad45cf13de7ee39}
+
+\begin{DoxyCompactList}\small\item\em Returns a reference to the Texture\-Font with the given family name, size and style. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A wrapper for a collection of gl\-::\-Texture\-Font families. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/\-Users/pjh/\-Desktop/\-Work/\-Teaching/\-Creative\-Evolution\-Course/core/include/gui/Gui\-Typography.\-h\item 
+/\-Users/pjh/\-Desktop/\-Work/\-Teaching/\-Creative\-Evolution\-Course/core/src/gui/Gui\-Typography.\-cpp\end{DoxyCompactItemize}

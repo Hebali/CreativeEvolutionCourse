@@ -1,0 +1,157 @@
+\hypertarget{class_ui_plot}{\section{Ui\-Plot Class Reference}
+\label{class_ui_plot}\index{Ui\-Plot@{Ui\-Plot}}
+}
+
+
+A 2\-D plotting widget.  
+
+
+
+
+{\ttfamily \#include $<$Gui\-Plot.\-h$>$}
+
+Inheritance diagram for Ui\-Plot\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_ui_plot}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_ui_plot_abde1f4cef588a3fd30a6892e78c80cbc}{\hyperlink{class_ui_plot_abde1f4cef588a3fd30a6892e78c80cbc}{Ui\-Plot} (const std\-::string \&i\-Font\-Family\-Name=\char`\"{}\char`\"{}, \hyperlink{class_font_suitcase}{Font\-Suitcase} $\ast$i\-Font\-Suitcase\-Ref=N\-U\-L\-L)}\label{class_ui_plot_abde1f4cef588a3fd30a6892e78c80cbc}
+
+\begin{DoxyCompactList}\small\item\em Basic constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_plot_a9bb04d1b64d9a6a48496b35fe63057dc}{virtual \hyperlink{class_ui_plot_a9bb04d1b64d9a6a48496b35fe63057dc}{$\sim$\-Ui\-Plot} ()}\label{class_ui_plot_a9bb04d1b64d9a6a48496b35fe63057dc}
+
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_plot_acc1e3d6aedeec573ce437c9037d6a1dc}{virtual void \hyperlink{class_ui_plot_acc1e3d6aedeec573ce437c9037d6a1dc}{draw} ()}\label{class_ui_plot_acc1e3d6aedeec573ce437c9037d6a1dc}
+
+\begin{DoxyCompactList}\small\item\em An overloadable draw method. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_plot_ab85054012a46819e775942fd4636f237}{virtual bool \hyperlink{class_ui_plot_ab85054012a46819e775942fd4636f237}{mouse\-Move} (ci\-::app\-::\-Mouse\-Event i\-Event)}\label{class_ui_plot_ab85054012a46819e775942fd4636f237}
+
+\begin{DoxyCompactList}\small\item\em Overloadable mouse move event callback method. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_plot_a783c58010f2f3d94665a02a9e5bc552b}{virtual bool \hyperlink{class_ui_plot_a783c58010f2f3d94665a02a9e5bc552b}{mouse\-Down} (ci\-::app\-::\-Mouse\-Event i\-Event)}\label{class_ui_plot_a783c58010f2f3d94665a02a9e5bc552b}
+
+\begin{DoxyCompactList}\small\item\em Overloadable mouse down event callback method. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_plot_a85b1ca17a9d20c30c2d1a1df7ff3b6e5}{virtual bool \hyperlink{class_ui_plot_a85b1ca17a9d20c30c2d1a1df7ff3b6e5}{mouse\-Drag} (ci\-::app\-::\-Mouse\-Event i\-Event)}\label{class_ui_plot_a85b1ca17a9d20c30c2d1a1df7ff3b6e5}
+
+\begin{DoxyCompactList}\small\item\em Overloadable mouse drag event callback method. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_plot_a0a11274f2d4f9a2a23630da46711a4f7}{virtual bool \hyperlink{class_ui_plot_a0a11274f2d4f9a2a23630da46711a4f7}{mouse\-Up} (ci\-::app\-::\-Mouse\-Event i\-Event)}\label{class_ui_plot_a0a11274f2d4f9a2a23630da46711a4f7}
+
+\begin{DoxyCompactList}\small\item\em Overloadable mouse up event callback method. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_plot_abb351c1945f85f48a611b3b13cf84e47}{void \hyperlink{class_ui_plot_abb351c1945f85f48a611b3b13cf84e47}{clear\-Inputs} ()}\label{class_ui_plot_abb351c1945f85f48a611b3b13cf84e47}
+
+\begin{DoxyCompactList}\small\item\em Removes all data inputs from the plotter. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_plot_a802ba6f658a49d4bb1ad6774d6ab82ad}{void \hyperlink{class_ui_plot_a802ba6f658a49d4bb1ad6774d6ab82ad}{add\-Input} (const ci\-::\-Poly\-Line2f \&i\-Input, const ci\-::\-Color\-A \&i\-Color)}\label{class_ui_plot_a802ba6f658a49d4bb1ad6774d6ab82ad}
+
+\begin{DoxyCompactList}\small\item\em Adds a ci\-::\-Poly\-Line2f data input to the plotter. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_plot_abf9dcc2ad03c50690ee2b729e529ace5}{void \hyperlink{class_ui_plot_abf9dcc2ad03c50690ee2b729e529ace5}{add\-Input} (Plotter\-Data\-Ref i\-Data\-Ref)}\label{class_ui_plot_abf9dcc2ad03c50690ee2b729e529ace5}
+
+\begin{DoxyCompactList}\small\item\em Adds a Plotter\-Data\-Ref data input to the plotter. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_plot_ad7d60f211a1f293764b768a940efd4d9}{void \hyperlink{class_ui_plot_ad7d60f211a1f293764b768a940efd4d9}{remove\-Input} (Plotter\-Data\-Ref i\-Data\-Ref)}\label{class_ui_plot_ad7d60f211a1f293764b768a940efd4d9}
+
+\begin{DoxyCompactList}\small\item\em Removes the given Plotter\-Data\-Ref data input from the plotter. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_plot_a04a2f95322177958db575e14ee91200b}{void \hyperlink{class_ui_plot_a04a2f95322177958db575e14ee91200b}{set\-X\-Range} (const float \&i\-Min, const float \&i\-Max)}\label{class_ui_plot_a04a2f95322177958db575e14ee91200b}
+
+\begin{DoxyCompactList}\small\item\em Sets the display range for the graph's x-\/axis. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_plot_afb652ac5db1abf7154b3ed022d86c4fc}{void \hyperlink{class_ui_plot_afb652ac5db1abf7154b3ed022d86c4fc}{set\-Y\-Range} (const float \&i\-Min, const float \&i\-Max)}\label{class_ui_plot_afb652ac5db1abf7154b3ed022d86c4fc}
+
+\begin{DoxyCompactList}\small\item\em Sets the display range for the graph's y-\/axis. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_plot_a509b759eb6b3f5dbc740e8ef0e28b824}{void \hyperlink{class_ui_plot_a509b759eb6b3f5dbc740e8ef0e28b824}{set\-Origin\-Color} (const ci\-::\-Color\-A \&i\-Color)}\label{class_ui_plot_a509b759eb6b3f5dbc740e8ef0e28b824}
+
+\begin{DoxyCompactList}\small\item\em Sets the origin line color. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_plot_ac0777f9e0551f2280b485d57a5f11824}{const ci\-::\-Color\-A \& \hyperlink{class_ui_plot_ac0777f9e0551f2280b485d57a5f11824}{get\-Origin\-Color} () const }\label{class_ui_plot_ac0777f9e0551f2280b485d57a5f11824}
+
+\begin{DoxyCompactList}\small\item\em Returns the origin line color. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_plot_ae40b2f8d9edc9b0f7619cfdbbebd1ffa}{void \hyperlink{class_ui_plot_ae40b2f8d9edc9b0f7619cfdbbebd1ffa}{set\-Origin\-Weight} (const float \&i\-Weight)}\label{class_ui_plot_ae40b2f8d9edc9b0f7619cfdbbebd1ffa}
+
+\begin{DoxyCompactList}\small\item\em Sets the origin line width. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_plot_af4f6b469d6126395cea17182ea9dfe80}{const float \& \hyperlink{class_ui_plot_af4f6b469d6126395cea17182ea9dfe80}{get\-Origin\-Weight} () const }\label{class_ui_plot_af4f6b469d6126395cea17182ea9dfe80}
+
+\begin{DoxyCompactList}\small\item\em Returns the origin line width. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_plot_a3c403c69bf8e4a7a7f0d5e64c0e48d12}{void \hyperlink{class_ui_plot_a3c403c69bf8e4a7a7f0d5e64c0e48d12}{set\-Grid\-Color} (const ci\-::\-Color\-A \&i\-Color)}\label{class_ui_plot_a3c403c69bf8e4a7a7f0d5e64c0e48d12}
+
+\begin{DoxyCompactList}\small\item\em Sets the grid line color. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_plot_afa1cdb6644a6f0b64d822c250f54052d}{const ci\-::\-Color\-A \& \hyperlink{class_ui_plot_afa1cdb6644a6f0b64d822c250f54052d}{get\-Grid\-Color} () const }\label{class_ui_plot_afa1cdb6644a6f0b64d822c250f54052d}
+
+\begin{DoxyCompactList}\small\item\em Returns the grid line color. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_plot_a6dd6203640388a4c3bf0d9aab2c72adb}{void \hyperlink{class_ui_plot_a6dd6203640388a4c3bf0d9aab2c72adb}{set\-Grid\-Weight} (const float \&i\-Weight)}\label{class_ui_plot_a6dd6203640388a4c3bf0d9aab2c72adb}
+
+\begin{DoxyCompactList}\small\item\em Sets the grid line width. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_plot_ad8d367aaafa3fbf36506c280b8e40122}{const float \& \hyperlink{class_ui_plot_ad8d367aaafa3fbf36506c280b8e40122}{get\-Grid\-Weight} () const }\label{class_ui_plot_ad8d367aaafa3fbf36506c280b8e40122}
+
+\begin{DoxyCompactList}\small\item\em Returns the grid line width. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_ui_plot_a11a0f4c5478a1c80536bf01d509320ae}{virtual void \hyperlink{class_ui_plot_a11a0f4c5478a1c80536bf01d509320ae}{recompute\-Formatting} ()}\label{class_ui_plot_a11a0f4c5478a1c80536bf01d509320ae}
+
+\begin{DoxyCompactList}\small\item\em An overloadable method that is evoked when the widget requires updating. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_plot_ab88c5f30e3af27918d2c8b9d3ce6d1d6}{void \hyperlink{class_ui_plot_ab88c5f30e3af27918d2c8b9d3ce6d1d6}{deep\-Recompute\-Formatting} ()}\label{class_ui_plot_ab88c5f30e3af27918d2c8b9d3ce6d1d6}
+
+\begin{DoxyCompactList}\small\item\em A protected method that is evoked automatically when the widget requires updating. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_plot_a0b2f5162c3586741bf0b9dc02e852d84}{std\-::string \hyperlink{class_ui_plot_a0b2f5162c3586741bf0b9dc02e852d84}{get\-Vertex\-Label\-String} (const float \&i\-X, const float \&i\-Y)}\label{class_ui_plot_a0b2f5162c3586741bf0b9dc02e852d84}
+
+\begin{DoxyCompactList}\small\item\em Returns a formatted string representing the input 2\-D coordinate. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_plot_a0c1a3677e260b81311d7f9fceff9dfdc}{bool \hyperlink{class_ui_plot_a0c1a3677e260b81311d7f9fceff9dfdc}{screen\-To\-Graph\-Coord} (const ci\-::\-Vec2f \&i\-Screen\-Coord, ci\-::\-Vec2f \&o\-Graph\-Coord, ci\-::\-Vec2f \&o\-Widget\-Relative\-Coord)}\label{class_ui_plot_a0c1a3677e260b81311d7f9fceff9dfdc}
+
+\begin{DoxyCompactList}\small\item\em Returns true if given screen coordinate is within rect and if so, outputs adjusted graph and widget-\/relative coordinates as parameters. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_plot_a16ab0e2694dfea588ae812bf90ffcfa7}{float \hyperlink{class_ui_plot_a16ab0e2694dfea588ae812bf90ffcfa7}{round\-To\-Nearest} (const float \&i\-Value, const float \&i\-Interval)}\label{class_ui_plot_a16ab0e2694dfea588ae812bf90ffcfa7}
+
+\begin{DoxyCompactList}\small\item\em Returns the input value rounded to the nearest interval. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_ui_plot_a459756f5693d9c2a4386b8c9afeab6d7}{Plotter\-Data\-Ref\-Vec \hyperlink{class_ui_plot_a459756f5693d9c2a4386b8c9afeab6d7}{m\-Inputs}}\label{class_ui_plot_a459756f5693d9c2a4386b8c9afeab6d7}
+
+\begin{DoxyCompactList}\small\item\em A vector of input references to be plotted. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_plot_a48c5655eb3818273e3db57c8b3922d40}{ci\-::\-Rectf \hyperlink{class_ui_plot_a48c5655eb3818273e3db57c8b3922d40}{m\-Range}}\label{class_ui_plot_a48c5655eb3818273e3db57c8b3922d40}
+
+\begin{DoxyCompactList}\small\item\em The 2\-D drawing region, formatted as\-: ( Min\-X, Min\-Y, Max\-X, Max\-Y ) \end{DoxyCompactList}\item 
+\hypertarget{class_ui_plot_acd67bf61b3df177184d7a3dbbceea79c}{ci\-::\-Color\-A \hyperlink{class_ui_plot_acd67bf61b3df177184d7a3dbbceea79c}{m\-Origin\-Color}}\label{class_ui_plot_acd67bf61b3df177184d7a3dbbceea79c}
+
+\begin{DoxyCompactList}\small\item\em The stroke color of origin lines. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_plot_a6c9a695c8be63c39849ce2e3c0de92a8}{ci\-::\-Color\-A \hyperlink{class_ui_plot_a6c9a695c8be63c39849ce2e3c0de92a8}{m\-Grid\-Color}}\label{class_ui_plot_a6c9a695c8be63c39849ce2e3c0de92a8}
+
+\begin{DoxyCompactList}\small\item\em The stroke color of grid lines. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_plot_a7eb91d0c14287a285febc8292f41650a}{ci\-::\-Color\-A \hyperlink{class_ui_plot_a7eb91d0c14287a285febc8292f41650a}{m\-Data\-Color}}\label{class_ui_plot_a7eb91d0c14287a285febc8292f41650a}
+
+\begin{DoxyCompactList}\small\item\em The stroke color of data lines. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_plot_a776da44cbb10f3a64c583f0e7b3e22af}{float \hyperlink{class_ui_plot_a776da44cbb10f3a64c583f0e7b3e22af}{m\-Origin\-Weight}}\label{class_ui_plot_a776da44cbb10f3a64c583f0e7b3e22af}
+
+\begin{DoxyCompactList}\small\item\em The stroke weight of origin lines. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_plot_aa5275e2f35c4540f0c48499d16fdb836}{float \hyperlink{class_ui_plot_aa5275e2f35c4540f0c48499d16fdb836}{m\-Grid\-Weight}}\label{class_ui_plot_aa5275e2f35c4540f0c48499d16fdb836}
+
+\begin{DoxyCompactList}\small\item\em The stroke weight of grid lines. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_plot_a845b0ff1685c0d487852bc63328253bf}{\hyperlink{class_ui_text}{Ui\-Text} $\ast$ \hyperlink{class_ui_plot_a845b0ff1685c0d487852bc63328253bf}{m\-Label\-T\-L}}\label{class_ui_plot_a845b0ff1685c0d487852bc63328253bf}
+
+\begin{DoxyCompactList}\small\item\em A pointer to the top-\/left label child. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_plot_a523a8033dbef869f36aca358a5452951}{\hyperlink{class_ui_text}{Ui\-Text} $\ast$ \hyperlink{class_ui_plot_a523a8033dbef869f36aca358a5452951}{m\-Label\-T\-R}}\label{class_ui_plot_a523a8033dbef869f36aca358a5452951}
+
+\begin{DoxyCompactList}\small\item\em A pointer to the top-\/right label child. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_plot_a4b98f5344ff29493fbc4a9af7d28772a}{\hyperlink{class_ui_text}{Ui\-Text} $\ast$ \hyperlink{class_ui_plot_a4b98f5344ff29493fbc4a9af7d28772a}{m\-Label\-B\-L}}\label{class_ui_plot_a4b98f5344ff29493fbc4a9af7d28772a}
+
+\begin{DoxyCompactList}\small\item\em A pointer to the bottom-\/left label child. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_plot_aa9b435375ad0653bbd06c2f5ce9d5c00}{\hyperlink{class_ui_text}{Ui\-Text} $\ast$ \hyperlink{class_ui_plot_aa9b435375ad0653bbd06c2f5ce9d5c00}{m\-Label\-B\-R}}\label{class_ui_plot_aa9b435375ad0653bbd06c2f5ce9d5c00}
+
+\begin{DoxyCompactList}\small\item\em A pointer to the bottom-\/right label child. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_plot_a0e6e29d763932114093f620297175eed}{\hyperlink{class_ui_text}{Ui\-Text} $\ast$ \hyperlink{class_ui_plot_a0e6e29d763932114093f620297175eed}{m\-Label\-Cursor}}\label{class_ui_plot_a0e6e29d763932114093f620297175eed}
+
+\begin{DoxyCompactList}\small\item\em A pointer to the cursor label child. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_plot_a940504c63f58dff1171a1c9babb4400d}{\hyperlink{class_font_suitcase}{Font\-Suitcase} $\ast$ \hyperlink{class_ui_plot_a940504c63f58dff1171a1c9babb4400d}{m\-Font\-Suitcase\-Ref}}\label{class_ui_plot_a940504c63f58dff1171a1c9babb4400d}
+
+\begin{DoxyCompactList}\small\item\em A pointer to the global font suitcase. \end{DoxyCompactList}\item 
+\hypertarget{class_ui_plot_a2cc7c0039c7468b50eb38f025e7a7ec0}{bool \hyperlink{class_ui_plot_a2cc7c0039c7468b50eb38f025e7a7ec0}{m\-Dirty}}\label{class_ui_plot_a2cc7c0039c7468b50eb38f025e7a7ec0}
+
+\begin{DoxyCompactList}\small\item\em Flags whether internal formatting needs updating. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A 2\-D plotting widget. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/\-Users/pjh/\-Desktop/\-Work/\-Teaching/\-Creative\-Evolution\-Course/core/include/gui/Gui\-Plot.\-h\item 
+/\-Users/pjh/\-Desktop/\-Work/\-Teaching/\-Creative\-Evolution\-Course/core/src/gui/Gui\-Plot.\-cpp\end{DoxyCompactItemize}

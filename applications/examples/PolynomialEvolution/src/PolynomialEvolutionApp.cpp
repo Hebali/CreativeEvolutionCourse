@@ -29,14 +29,16 @@ public:
 	void draw();
 	void shutdown();
 	
+	void saveFrame(const string& iDirectory);
+	
 	FontSuitcase*			mSuitcase;
-	GuiBase*					mScene;
-	GuiText*					mInfoLabel;
+	GuiBase*				mScene;
+	GuiText*				mInfoLabel;
 	
 	PolynomialPopulation*	mPopulation;
 	PolynomialDataRef		mBest;
 	
-	GuiPlot*					mPlotRef;
+	GuiPlot*				mPlotRef;
 };
 
 void PolynomialEvolutionApp::prepareSettings(Settings* settings)
@@ -62,7 +64,7 @@ void PolynomialEvolutionApp::setup()
 	mScene->setRelativeDimension( Vec2f( 1.0, 1.0 ) );
 	
 	mInfoLabel = new GuiText( "", "Heuristica", 14, FontStyle::BOLD, mSuitcase );
-	mInfoLabel->setRelativePosition( Vec2f( 0.5, 1.0 ) );
+	mInfoLabel->setRelativePosition( Vec2f( 0.5, 0.97 ) );
 	mInfoLabel->setTextColor( ColorA::white() );
 	mInfoLabel->setHighlightColor( ColorA( 0.0, 0.0, 0.0, 0.5 ) );
 	mScene->addChild( mInfoLabel );
@@ -170,9 +172,11 @@ void PolynomialEvolutionApp::update()
 		mBest->setDrawParameters( -10.0, 10.0, true, true, ColorA( 0, 1, 1, 1 ) );
 		// Add current generation to plotter:
 		mPlotRef->addInput( mBest );
+		// Update info label:
+		mInfoLabel->setText( mBest->getFormulaString() );
 	}
 	// Update info label:
-	mInfoLabel->setText( "FPS: " + to_string( getAverageFps() ) + "\t\tRunning Time: " + to_string( getElapsedSeconds() ) + " seconds" );
+	//mInfoLabel->setText( "FPS: " + to_string( getAverageFps() ) + "\t\tRunning Time: " + to_string( getElapsedSeconds() ) + " seconds" );
 }
 
 void PolynomialEvolutionApp::draw()
@@ -184,6 +188,8 @@ void PolynomialEvolutionApp::draw()
 	if( mScene ) {
 		mScene->deepDraw();
 	}
+	
+	//saveFrame( "/Users/pjh/Desktop/test_renders/" );
 }
 
 void PolynomialEvolutionApp::shutdown()
@@ -191,6 +197,16 @@ void PolynomialEvolutionApp::shutdown()
 	delete mPopulation;
 	delete mScene;
 	delete mSuitcase;
+}
+
+void PolynomialEvolutionApp::saveFrame(const string& iDirectory)
+{
+	int32_t tFrames = getElapsedFrames();
+	int32_t tZeros  = 5 - ( tFrames > 0 ? (int) log10 ((double) tFrames) + 1 : 1 );
+	string tPath = iDirectory + "frame_";
+	tPath += string( tZeros, '0' ) + toString( tFrames );
+	tPath += ".png";
+	writeImage( tPath, copyWindowSurface() );
 }
 
 CINDER_APP_NATIVE( PolynomialEvolutionApp, RendererGl )
